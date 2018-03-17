@@ -10,7 +10,7 @@ Any IO-related exception. Such errors typically involves access to disk, network
 ## Constructors
 <a name="c-IOException-string"></a>
 ### <code>public IOException([string](../../String) *message*)</code>
-Create an IOException with specified message.<br><br><a href="broken-link">message</a> The message for this exception.
+Create an IOException with specified message.
 ## Fields
 
 ## Methods

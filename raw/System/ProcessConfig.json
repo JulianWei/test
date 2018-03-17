@@ -225,7 +225,7 @@
       "isStatic": false,
       "name": "getInputStream",
       "visibility": "PUBLIC",
-      "summary": "Get the input stream which was set by [setInputStream].",
+      "summary": "Get the input stream which was set by [setInputStream()](#setInputStream).",
       "references": []
     },
     {
@@ -242,7 +242,7 @@
       "isStatic": false,
       "name": "getOutputStream",
       "visibility": "PUBLIC",
-      "summary": "Get the output stream which was set by [setOutputStream].",
+      "summary": "Get the output stream which was set by [setOutputStream()](#setOutputStream).",
       "references": []
     },
     {
@@ -259,7 +259,7 @@
       "isStatic": false,
       "name": "getErrorStream",
       "visibility": "PUBLIC",
-      "summary": "Get the output stream which was set by [setErrorStream].",
+      "summary": "Get the output stream which was set by [setErrorStream()](#setErrorStream).",
       "references": []
     }
   ],

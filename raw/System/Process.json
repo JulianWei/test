@@ -275,7 +275,7 @@
       "isStatic": false,
       "name": "isAlive",
       "visibility": "PUBLIC",
-      "summary": "Check if the process is alive. This method will return true only before [start()], or after either [wait()]/[kill()] is called.",
+      "summary": "Check if the process is alive. This method will return true only before [start()](#start), or after either [wait()](#wait) or [kill()](#kill) is called.",
       "references": []
     },
     {

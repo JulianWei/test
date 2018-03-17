@@ -6,11 +6,11 @@ A file system item. Can be a file or directory.<br><br>When using this and other
 |**Type**|**Name**|**Signature**
 |:-------|:-------|:------------
 |*method*|<a href="#m-getName-void"><b>getName</b></a>|`public String getName()`
-|*method*|<a href="#m-create-void"><b>create</b></a>|`public Bool create()`
-|*method*|<a href="#m-delete-void"><b>delete</b></a>|`public Bool delete()`
+|*method*|<a href="#m-create-void"><b>create</b></a>|`public bool create()`
+|*method*|<a href="#m-delete-void"><b>delete</b></a>|`public bool delete()`
 |*method*|<a href="#m-getPath-void"><b>getPath</b></a>|`public String getPath()`
-|*method*|<a href="#m-exists-void"><b>exists</b></a>|`public Bool exists()`
-|*method*|<a href="#m-isFile-void"><b>isFile</b></a>|`public Bool isFile()`
+|*method*|<a href="#m-exists-void"><b>exists</b></a>|`public bool exists()`
+|*method*|<a href="#m-isFile-void"><b>isFile</b></a>|`public bool isFile()`
 
 ## Methods
 <a name="m-getName-void"></a>
@@ -22,7 +22,7 @@ Get the name of this item. This is only the simple name (with extension part) un
 <a name="m-getName-void-r"></a>
 
 <a name="m-create-void"></a>
-### <code>public Bool create()</code>
+### <code>public bool create()</code>
 Create this item.
 
 **Returns**
@@ -30,7 +30,7 @@ Create this item.
 <a name="m-create-void-r"></a>True if the item was successfully created.
 
 <a name="m-delete-void"></a>
-### <code>public Bool delete()</code>
+### <code>public bool delete()</code>
 Delete this item.
 
 **Returns**
@@ -46,7 +46,7 @@ Get the absolute path of this item. This doesn't include the name.
 <a name="m-getPath-void-r"></a>
 
 <a name="m-exists-void"></a>
-### <code>public Bool exists()</code>
+### <code>public bool exists()</code>
 Whether this item exist on file system.
 
 **Returns**
@@ -54,7 +54,7 @@ Whether this item exist on file system.
 <a name="m-exists-void-r"></a>True if the item exists.
 
 <a name="m-isFile-void"></a>
-### <code>public Bool isFile()</code>
+### <code>public bool isFile()</code>
 Whether this item is a file
 
 **Returns**

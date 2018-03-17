@@ -264,7 +264,7 @@
       "isStatic": false,
       "name": "canWrite",
       "visibility": "PUBLIC",
-      "summary": "Whether this stream supports writing. This method governs [write](#write).",
+      "summary": "Whether this stream supports writing. This method governs [write](#write(byte)) and other write methods.",
       "references": []
     },
     {

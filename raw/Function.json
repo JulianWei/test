@@ -3,9 +3,36 @@
   "ctors": [],
   "fields": [],
   "interfaces": [],
-  "methods": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "The same value the function would return when being called normally, except if the function returnsnothing (void), a null will be returned insttead.",
+        "type": {
+          "simpleName": "Any",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The same arguments that would be passed to the function when calling it normally, except the countof arguments doesn\u0027t have to be the same as that of parameters.",
+          "type": {
+            "simpleName": "Any",
+            "dimension": 1
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "invoke",
+      "visibility": "PUBLIC",
+      "summary": "Invoke the function dynamically.\u003cbr\u003e\u003cbr\u003eWhen calling a function using Julian\u0027s built-in grammar, namely in the form of \"fun(a, b)\", the arguments are checked for each parameter\u0027s type at corresponding position, and the count of arguments are also checked to be same as that of parameters.\u003cbr\u003e\u003cbr\u003eWhen invoking the method dynamically, however, the count of arguments are not checked. If the arguments are less than required, the missing ones will be initialized with the default value of the declared parameeter type. In the contrast, if the arguments are more than required, the excessive one will be discarded. For the arguments that fall into the range of paramters, their types are still checked as in the normal calling procedure.\u003cbr\u003e\u003cbr\u003eAnother property of dynamic invocation is that if the function doesn\u0027t return a value (void), a null value will be returned instead.",
+      "references": []
+    }
+  ],
   "subtype": "CLASS",
   "name": "Function",
+  "visibility": "PUBLIC",
   "summary": "Function is the base class for all global functions, methods and lambdas defined in Julian.\u003cbr\u003e\u003cbr\u003eFunction has the first-class property in Julian. Like all other classes, it inherits [Object]. What sets it apart from other classes is the ability to execute. To invoke a function, use \"()\" grammar with argument expressions listed between ( and ). For example,\u003cbr\u003e\u003cbr\u003e[code]\nfun(1, \"a\", someVal);[code: end] Since function is first-class instance, it can be assigned and passed around:\u003cbr\u003e\u003cbr\u003e[code]\nvoid fun(){};\nvar f \u003d fun;\nf();[code: end] The same can be done for methods (both instance and static) and lambdas.\u003cbr\u003e\u003cbr\u003eIn general, Function in Julian doesn\u0027t enforce a strong typing. When a Function type is declared somewhere, a function instance of any given signature can be passed in. By the time a function is invoked, the arguments will be checked strickly, and when the function returns, the return value\u0027s type will also be checked against the declared type. This behavior can be relaxed a little by [dynamic invocation](#invoke).\u003cbr\u003e\u003cbr\u003eThis class is neither instantiate nor extensible. For more detailed description on Function, see [Julian Tutorial].",
   "references": []
 }

@@ -1,6 +1,7 @@
 {
   "alias": "float",
   "name": "Float",
+  "visibility": "PUBLIC",
   "summary": "The floating-point type in Julian language. This type implements IEEE-754 standard. It has a rought value range of approximately [-3.40282347E+38F, 3.40282347E+38F]. It can be cast to [int](Integer) with all precision lost.\u003cbr\u003e\u003cbr\u003efloat type can participate in arithmetic operations such as \u0027+\u0027 and \u0027*\u0027 and \u0027/\u0027. It can aslo be concatenated to string value with \u0027+\u0027 operator in the literal form of this value.\u003cbr\u003e\u003cbr\u003eint is a primitive type. Therefore it can only be assigned to a variable with same type or an [untyped](Any) variable.",
   "references": []
 }

@@ -177,7 +177,7 @@
       "isStatic": false,
       "name": "getReadStream",
       "visibility": "PUBLIC",
-      "summary": "Get a stream to read from this file.\u003cbr\u003e\u003cbr\u003e[see System.IO.FileStream]",
+      "summary": "Get a stream to read from this file.",
       "references": []
     },
     {
@@ -202,7 +202,7 @@
       "isStatic": false,
       "name": "getWriteStream",
       "visibility": "PUBLIC",
-      "summary": "Get a stream to write into this file.\u003cbr\u003e\u003cbr\u003e[see System.IO.FileStream]",
+      "summary": "Get a stream to write into this file.",
       "references": []
     }
   ],

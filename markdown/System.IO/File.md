@@ -6,15 +6,15 @@ A file, as defined by the underlying file system.
 |**Type**|**Name**|**Signature**
 |:-------|:-------|:------------
 |*constructor*|<a href="#c-File-string"><b>File</b></a>|`public File(string)`
-|*method*|<a href="#m-isFile-void"><b>isFile</b></a>|`public Bool isFile()`
+|*method*|<a href="#m-isFile-void"><b>isFile</b></a>|`public bool isFile()`
 |*method*|<a href="#m-getName-void"><b>getName</b></a>|`public String getName()`
 |*method*|<a href="#m-getPath-void"><b>getPath</b></a>|`public String getPath()`
 |*method*|<a href="#m-readAllText-void"><b>readAllText</b></a>|`public String readAllText()`
-|*method*|<a href="#m-exists-void"><b>exists</b></a>|`public Bool exists()`
-|*method*|<a href="#m-create-void"><b>create</b></a>|`public Bool create()`
-|*method*|<a href="#m-delete-void"><b>delete</b></a>|`public Bool delete()`
+|*method*|<a href="#m-exists-void"><b>exists</b></a>|`public bool exists()`
+|*method*|<a href="#m-create-void"><b>create</b></a>|`public bool create()`
+|*method*|<a href="#m-delete-void"><b>delete</b></a>|`public bool delete()`
 |*method*|<a href="#m-getReadStream-void"><b>getReadStream</b></a>|`public Stream getReadStream()`
-|*method*|<a href="#m-getWriteStream-Bool"><b>getWriteStream</b></a>|`public Stream getWriteStream(Bool)`
+|*method*|<a href="#m-getWriteStream-bool"><b>getWriteStream</b></a>|`public Stream getWriteStream(bool)`
 
 ## Constructors
 <a name="c-File-string"></a>
@@ -24,7 +24,7 @@ Create a new file with the specified path.
 
 ## Methods
 <a name="m-isFile-void"></a>
-### <code>public Bool isFile()</code>
+### <code>public bool isFile()</code>
 Return true.
 
 **Returns**
@@ -56,7 +56,7 @@ Read all contents from this file as text. This is rather convenient method for q
 <a name="m-readAllText-void-r"></a>The contains from this file, in the format of plain ASCII text.
 
 <a name="m-exists-void"></a>
-### <code>public Bool exists()</code>
+### <code>public bool exists()</code>
 Whether this file exist on file system.
 
 **Returns**
@@ -64,7 +64,7 @@ Whether this file exist on file system.
 <a name="m-exists-void-r"></a>True if the file exists.
 
 <a name="m-create-void"></a>
-### <code>public Bool create()</code>
+### <code>public bool create()</code>
 Create a file represented by this object.
 
 **Returns**
@@ -77,7 +77,7 @@ Create a file represented by this object.
 An error occurred during file creation.
 
 <a name="m-delete-void"></a>
-### <code>public Bool delete()</code>
+### <code>public bool delete()</code>
 Delete this file.
 
 **Returns**
@@ -91,23 +91,23 @@ An error occurred during file deletion.
 
 <a name="m-getReadStream-void"></a>
 ### <code>public Stream getReadStream()</code>
-Get a stream to read from this file.<br><br><a href="broken-link">see System.IO.FileStream</a>
+Get a stream to read from this file.
 
 **Returns**
 
 <a name="m-getReadStream-void-r"></a>A stream that supports reading (both synchronously and asynchronously) but not writing or marking.
 
-<a name="m-getWriteStream-Bool"></a>
-### <code>public Stream getWriteStream([Bool](../../Bool) *append*)</code>
-Get a stream to write into this file.<br><br><a href="broken-link">see System.IO.FileStream</a>
+<a name="m-getWriteStream-bool"></a>
+### <code>public Stream getWriteStream([bool](../../Bool) *append*)</code>
+Get a stream to write into this file.
 
 **Parameters**
 
-<a name="m-getWriteStream-Bool-p-append"></a>
+<a name="m-getWriteStream-bool-p-append"></a>
 - **append**
 
 
 **Returns**
 
-<a name="m-getWriteStream-Bool-r"></a>A stream that supports writing but not reading or marking.
+<a name="m-getWriteStream-bool-r"></a>A stream that supports writing but not reading or marking.
 

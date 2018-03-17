@@ -25,7 +25,7 @@
       "isStatic": true,
       "name": "print",
       "visibility": "PUBLIC",
-      "summary": "Print the given value to the console. If the value is an [Object], calls [Object.toString()] to get the string to output. If the value is of primitive type, prints its literal representation. If the value is null, prints \"(null)\".",
+      "summary": "Print the given value to the console. If the value is an [Object], calls [Object.toString()](Object#toString()) to get the string to output. If the value is of primitive type, prints its literal representation. If the value is null, prints \"(null)\".",
       "references": []
     },
     {
@@ -50,7 +50,7 @@
       "isStatic": true,
       "name": "println",
       "visibility": "PUBLIC",
-      "summary": "Print the given value to the console, then a line break sequences as defined by the underlying operating system. See [toString()] (Object.toString()) for more details.",
+      "summary": "Print the given value to the console, then a line break sequences as defined by the underlying operating system. See [toString()](Object#toString()) for more details.",
       "references": []
     },
     {

@@ -6,8 +6,8 @@ A queue with extended capability of blocking on pulling operation until data is 
 |**Type**|**Name**|**Signature**
 |:-------|:-------|:------------
 |*constructor*|<a href="#c-BlockingQueue-void"><b>BlockingQueue</b></a>|`public BlockingQueue()`
-|*method*|<a href="#m-pull-Integer-Bool"><b>pull</b></a>|`public (unknown) pull(Integer, Bool)`
-|*method*|<a href="#m-enqueue-(unknown)"><b>enqueue</b></a>|`public Void enqueue((unknown))`
+|*method*|<a href="#m-pull-int-bool"><b>pull</b></a>|`public (unknown) pull(int, bool)`
+|*method*|<a href="#m-enqueue-(unknown)"><b>enqueue</b></a>|`public void enqueue((unknown))`
 |*method*|<a href="#m-dequeue-void"><b>dequeue</b></a>|`public (unknown) dequeue()`
 
 ## Constructors
@@ -17,31 +17,31 @@ Create a new blocking queue.
 ## Fields
 
 ## Methods
-<a name="m-pull-Integer-Bool"></a>
-### <code>public (unknown) pull([Integer](../../Integer) *timeoutInMillisec*, [Bool](../../Bool) *throwIfTimeout*)</code>
-Remove an element from the head of queue. If the queue is empty, wait for <a href="m-pull-Integer-Bool-p-timeoutInMillisec">specified duration</a>. If new data becomes available within the duration this method will return successfully. Otherwise it either returns null, or throws, upon expiration.<br><br>This method will send the current thread into waiting state. Use caution to avoid deadlock.
+<a name="m-pull-int-bool"></a>
+### <code>public (unknown) pull([int](../../Integer) *timeoutInMillisec*, [bool](../../Bool) *throwIfTimeout*)</code>
+Remove an element from the head of queue. If the queue is empty, wait for <a href="m-pull-int-bool-p-timeoutInMillisec">specified duration</a>. If new data becomes available within the duration this method will return successfully. Otherwise it either returns null, or throws, upon expiration.<br><br>This method will send the current thread into waiting state. Use caution to avoid deadlock.
 
 **Parameters**
 
-<a name="m-pull-Integer-Bool-p-timeoutInMillisec"></a>
+<a name="m-pull-int-bool-p-timeoutInMillisec"></a>
 - **timeoutInMillisec**
 The time to wait, in milliseconds.
-<a name="m-pull-Integer-Bool-p-throwIfTimeout"></a>
+<a name="m-pull-int-bool-p-throwIfTimeout"></a>
 - **throwIfTimeout**
 true if to throw out IllegalStateException upon waiting expiration.
 
 **Returns**
 
-<a name="m-pull-Integer-Bool-r"></a>The element to remove; null if the queue is empty. It cannot differentiate between empty queue and null element.
+<a name="m-pull-int-bool-r"></a>The element to remove; null if the queue is empty. It cannot differentiate between empty queue and null element.
 
 **Throws**
 
 - [IllegalStateException](../../IllegalStateException)
-Only if (throwIfTimeout)<a href="m-pull-Integer-Bool-p-throwIfTimeout">throwIfTimeout</a> is true.
+Only if (throwIfTimeout)<a href="m-pull-int-bool-p-throwIfTimeout">throwIfTimeout</a> is true.
 
 <a name="m-enqueue-(unknown)"></a>
-### <code>public Void enqueue([(unknown)](../../(unknown)) *ele*)</code>
-Add a new element to the tail of queue. This will notify all the threads waiting at the call to <a href="../System.Collection/BlockingQueue">pull</a>.
+### <code>public void enqueue([(unknown)](../../(unknown)) *ele*)</code>
+Add a new element to the tail of queue. This will notify all the threads waiting at the call to <a href="../System.Collection/BlockingQueue#m-pull-int-bool">pull</a>.
 
 **Parameters**
 

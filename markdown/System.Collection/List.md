@@ -6,11 +6,11 @@ A list is a serial, self-scalable data structure that can grow its capacity on d
 |**Type**|**Name**|**Signature**
 |:-------|:-------|:------------
 |*constructor*|<a href="#c-List-void"><b>List</b></a>|`public List()`
-|*method*|<a href="#m-add-Object"><b>add</b></a>|`public Void add(Object)`
-|*method*|<a href="#m-get-Integer"><b>get</b></a>|`public Object get(Integer)`
-|*method*|<a href="#m-put-Integer-Object"><b>put</b></a>|`public Void put(Integer, Object)`
-|*method*|<a href="#m-remove-Integer"><b>remove</b></a>|`public Object remove(Integer)`
-|*method*|<a href="#m-size-void"><b>size</b></a>|`public Integer size()`
+|*method*|<a href="#m-add-Object"><b>add</b></a>|`public void add(Object)`
+|*method*|<a href="#m-get-int"><b>get</b></a>|`public Object get(int)`
+|*method*|<a href="#m-put-int-Object"><b>put</b></a>|`public void put(int, Object)`
+|*method*|<a href="#m-remove-int"><b>remove</b></a>|`public Object remove(int)`
+|*method*|<a href="#m-size-void"><b>size</b></a>|`public int size()`
 |*method*|<a href="#m-map-Function"><b>map</b></a>|`public List map(Function)`
 |*method*|<a href="#m-reduce-Function-(unknown)"><b>reduce</b></a>|`public (unknown) reduce(Function, (unknown))`
 
@@ -22,7 +22,7 @@ Create a new and empty List object, with default capacity.
 
 ## Methods
 <a name="m-add-Object"></a>
-### <code>public Void add([Object](../../Object) *element*)</code>
+### <code>public void add([Object](../../Object) *element*)</code>
 Add an item at the end of the list. This operation increase the size by 1.
 
 **Parameters**
@@ -35,60 +35,60 @@ The element to add. This element can be null and of any type.
 
 <a name="m-add-Object-r"></a>
 
-<a name="m-get-Integer"></a>
-### <code>public Object get([Integer](../../Integer) *index*)</code>
+<a name="m-get-int"></a>
+### <code>public Object get([int](../../Integer) *index*)</code>
 Get the item at the specified index.
 
 **Parameters**
 
-<a name="m-get-Integer-p-index"></a>
+<a name="m-get-int-p-index"></a>
 - **index**
 The index at which the item will be returned.
 
 **Returns**
 
-<a name="m-get-Integer-r"></a>
+<a name="m-get-int-r"></a>
 
 **Throws**
 
 - [System.ArrayOutOfRangeException](../System/ArrayOutOfRangeException)
 When the index is out of range.
 
-<a name="m-put-Integer-Object"></a>
-### <code>public Void put([Integer](../../Integer) *index*, [Object](../../Object) *value*)</code>
+<a name="m-put-int-Object"></a>
+### <code>public void put([int](../../Integer) *index*, [Object](../../Object) *value*)</code>
 Set the item at the specified index. The index must be within the range of current size.
 
 **Parameters**
 
-<a name="m-put-Integer-Object-p-index"></a>
+<a name="m-put-int-Object-p-index"></a>
 - **index**
 The index at which the item will be returned.
-<a name="m-put-Integer-Object-p-value"></a>
+<a name="m-put-int-Object-p-value"></a>
 - **value**
 
 
 **Returns**
 
-<a name="m-put-Integer-Object-r"></a>
+<a name="m-put-int-Object-r"></a>
 
 **Throws**
 
 - [System.ArrayOutOfRangeException](../System/ArrayOutOfRangeException)
 When the index is out of range.
 
-<a name="m-remove-Integer"></a>
-### <code>public Object remove([Integer](../../Integer) *index*)</code>
+<a name="m-remove-int"></a>
+### <code>public Object remove([int](../../Integer) *index*)</code>
 Remove the item at the specified index. The index must be within the range of current size.
 
 **Parameters**
 
-<a name="m-remove-Integer-p-index"></a>
+<a name="m-remove-int-p-index"></a>
 - **index**
 The index at which the item will be removed.
 
 **Returns**
 
-<a name="m-remove-Integer-r"></a>The removed item.
+<a name="m-remove-int-r"></a>The removed item.
 
 **Throws**
 
@@ -96,7 +96,7 @@ The index at which the item will be removed.
 When the index is out of range.
 
 <a name="m-size-void"></a>
-### <code>public Integer size()</code>
+### <code>public int size()</code>
 
 
 **Returns**

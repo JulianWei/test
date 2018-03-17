@@ -7,8 +7,8 @@ Object is the root class in Julian's typing system. All classes are derived from
 |:-------|:-------|:------------
 |*constructor*|<a href="#c-Object-void"><b>Object</b></a>|`public Object()`
 |*method*|<a href="#m-toString-void"><b>toString</b></a>|`public String toString()`
-|*method*|<a href="#m-equals-Object"><b>equals</b></a>|`public Bool equals(Object)`
-|*method*|<a href="#m-hashCode-void"><b>hashCode</b></a>|`public Integer hashCode()`
+|*method*|<a href="#m-equals-Object"><b>equals</b></a>|`public bool equals(Object)`
+|*method*|<a href="#m-hashCode-void"><b>hashCode</b></a>|`public int hashCode()`
 
 ## Constructors
 <a name="c-Object-void"></a>
@@ -26,7 +26,7 @@ Get the string-formed representation for this object.<br><br>It's recommended th
 <a name="m-toString-void-r"></a>A string that represents the runtime value of this object.
 
 <a name="m-equals-Object"></a>
-### <code>public Bool equals([Object](../Object) *another*)</code>
+### <code>public bool equals([Object](../Object) *another*)</code>
 Determine the logical equality between this object and anther.<br><br>In Julian, with the exception of <a href="../String">string</a>, objects are compared by reference when '=' operator is used. To check the semantic equality based on the internal value contained by the instance, this method should be implemented and called in place of the operator. It's recommended to override this method instead of coming up with a customized equality-check method because this method is also called by a bunch of System classes, such as <a href="System.Collection/Map">Map</a>.<br><br>If the subclass doesn't override this method, the default implementation is to perform equality check by reference. If overriden, the implementation should be idempotent and deterministic.
 
 **Parameters**
@@ -40,7 +40,7 @@ The other object against which the equality is checked.
 <a name="m-equals-Object-r"></a>true if the two objects are considered equal, however equality means as far as the types of thetwo participating objects are concerned.
 
 <a name="m-hashCode-void"></a>
-### <code>public Integer hashCode()</code>
+### <code>public int hashCode()</code>
 Compute a hash code from this object.<br><br>The hash code is used by certain system classes, most prominently <a href="System.Collection/Map">Map</a>, which needs to project an item at a slot in the map based on the hash value. Not meant for cryptographical purpose, the hash code is neither necessarily unique, nor one-directional. However, for the perfomance consideration, a high-quality implementation usually produces less collision than a poor one.<br><br>If the subclass doesn't override this method, the default implementation is up to the platform. If overriden, the implementation should be idempotent and deterministic.
 
 **Returns**

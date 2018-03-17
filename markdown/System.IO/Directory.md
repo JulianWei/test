@@ -6,12 +6,12 @@ A directory (a.k.a. folder), as defined by the underlying file system.
 |**Type**|**Name**|**Signature**
 |:-------|:-------|:------------
 |*constructor*|<a href="#c-Directory-string"><b>Directory</b></a>|`public Directory(string)`
-|*method*|<a href="#m-isFile-void"><b>isFile</b></a>|`public Bool isFile()`
+|*method*|<a href="#m-isFile-void"><b>isFile</b></a>|`public bool isFile()`
 |*method*|<a href="#m-getName-void"><b>getName</b></a>|`public String getName()`
 |*method*|<a href="#m-getPath-void"><b>getPath</b></a>|`public String getPath()`
-|*method*|<a href="#m-exists-void"><b>exists</b></a>|`public Bool exists()`
-|*method*|<a href="#m-create-void"><b>create</b></a>|`public Bool create()`
-|*method*|<a href="#m-delete-void"><b>delete</b></a>|`public Bool delete()`
+|*method*|<a href="#m-exists-void"><b>exists</b></a>|`public bool exists()`
+|*method*|<a href="#m-create-void"><b>create</b></a>|`public bool create()`
+|*method*|<a href="#m-delete-void"><b>delete</b></a>|`public bool delete()`
 |*method*|<a href="#m-listAll-void"><b>listAll</b></a>|`public Item listAll()`
 
 ## Constructors
@@ -22,7 +22,7 @@ Create a new directory with the specified path.
 
 ## Methods
 <a name="m-isFile-void"></a>
-### <code>public Bool isFile()</code>
+### <code>public bool isFile()</code>
 Return false.
 
 **Returns**
@@ -46,7 +46,7 @@ Get the absolute path of this directory. This doesn't include the name.
 <a name="m-getPath-void-r"></a>
 
 <a name="m-exists-void"></a>
-### <code>public Bool exists()</code>
+### <code>public bool exists()</code>
 Whether this directory exist on file system.
 
 **Returns**
@@ -54,7 +54,7 @@ Whether this directory exist on file system.
 <a name="m-exists-void-r"></a>True if the directory exists.
 
 <a name="m-create-void"></a>
-### <code>public Bool create()</code>
+### <code>public bool create()</code>
 Create a directory represented by this object.
 
 **Returns**
@@ -67,7 +67,7 @@ Create a directory represented by this object.
 An error occurred during directory creation.
 
 <a name="m-delete-void"></a>
-### <code>public Bool delete()</code>
+### <code>public bool delete()</code>
 Delete this directory recursively.<br><br>This operation is not transactional. If an exception is thrown during the call some items may have been deleted.<br><br>
 
 **Returns**

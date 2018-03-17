@@ -6,8 +6,8 @@ An interface used to mark a <a href="../System/Mapped">mapped</a> platform type 
 |**Type**|**Name**|**Signature**
 |:-------|:-------|:------------
 |*method*|<a href="#m-pfToString-void"><b>pfToString</b></a>|`public String pfToString()`
-|*method*|<a href="#m-pfHashCode-void"><b>pfHashCode</b></a>|`public Integer pfHashCode()`
-|*method*|<a href="#m-pfEquals-Object"><b>pfEquals</b></a>|`public Bool pfEquals(Object)`
+|*method*|<a href="#m-pfHashCode-void"><b>pfHashCode</b></a>|`public int pfHashCode()`
+|*method*|<a href="#m-pfEquals-Object"><b>pfEquals</b></a>|`public bool pfEquals(Object)`
 
 ## Methods
 <a name="m-pfToString-void"></a>
@@ -19,7 +19,7 @@ The delegating method to call toString() defined on the platform class.
 <a name="m-pfToString-void-r"></a>The string representation of the platform object.
 
 <a name="m-pfHashCode-void"></a>
-### <code>public Integer pfHashCode()</code>
+### <code>public int pfHashCode()</code>
 The delegating method to call hashcode() defined on the platform class.
 
 **Returns**
@@ -27,7 +27,7 @@ The delegating method to call hashcode() defined on the platform class.
 <a name="m-pfHashCode-void-r"></a>An integer calculated from the platform object.
 
 <a name="m-pfEquals-Object"></a>
-### <code>public Bool pfEquals([Object](../../Object) *val*)</code>
+### <code>public bool pfEquals([Object](../../Object) *val*)</code>
 The delegating method to call equals(Object) defined on the platform class.<br><br>
 
 **Parameters**

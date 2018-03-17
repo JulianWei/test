@@ -14,12 +14,12 @@ The class to represent an OS process.
 |*method*|<a href="#m-getWriteStream-void"><b>getWriteStream</b></a>|`public Stream getWriteStream()`
 |*method*|<a href="#m-getReadStream-void"><b>getReadStream</b></a>|`public Stream getReadStream()`
 |*method*|<a href="#m-getErrorStream-void"><b>getErrorStream</b></a>|`public Stream getErrorStream()`
-|*method*|<a href="#m-start-void"><b>start</b></a>|`public Void start()`
-|*method*|<a href="#m-wait-void"><b>wait</b></a>|`public Integer wait()`
-|*method*|<a href="#m-wait-Integer"><b>wait</b></a>|`public Bool wait(Integer)`
-|*method*|<a href="#m-isAlive-void"><b>isAlive</b></a>|`public Bool isAlive()`
-|*method*|<a href="#m-kill-void"><b>kill</b></a>|`public Integer kill()`
-|*method*|<a href="#m-getExitCode-void"><b>getExitCode</b></a>|`public Integer getExitCode()`
+|*method*|<a href="#m-start-void"><b>start</b></a>|`public void start()`
+|*method*|<a href="#m-wait-void"><b>wait</b></a>|`public int wait()`
+|*method*|<a href="#m-wait-int"><b>wait</b></a>|`public bool wait(int)`
+|*method*|<a href="#m-isAlive-void"><b>isAlive</b></a>|`public bool isAlive()`
+|*method*|<a href="#m-kill-void"><b>kill</b></a>|`public int kill()`
+|*method*|<a href="#m-getExitCode-void"><b>getExitCode</b></a>|`public int getExitCode()`
 
 ## Constructors
 <a name="c-Process-string-string-ProcessConfig"></a>
@@ -108,7 +108,7 @@ Get a stream to read from this process's standard error. This stream is backed b
 <a name="m-getErrorStream-void-r"></a>A stream to read from this process's standard error. Null if <a href="../System/ProcessConfig">getInheritedIO</a>is true or <a href="../System/ProcessConfig#m-getErrorStream-void">getErrorStream</a> is not null.
 
 <a name="m-start-void"></a>
-### <code>public Void start()</code>
+### <code>public void start()</code>
 Start the process. A process can only be started once.
 
 **Returns**
@@ -121,37 +121,37 @@ Start the process. A process can only be started once.
 if the process is not in <a href="../System/ProcessState#e-NOT_STARTED">a state to start</a>.
 
 <a name="m-wait-void"></a>
-### <code>public Integer wait()</code>
+### <code>public int wait()</code>
 Wait for the process to finish.
 
 **Returns**
 
 <a name="m-wait-void-r"></a>The exit code of the process upon its completion.
 
-<a name="m-wait-Integer"></a>
-### <code>public Bool wait([Integer](../../Integer) *millisec*)</code>
+<a name="m-wait-int"></a>
+### <code>public bool wait([int](../../Integer) *millisec*)</code>
 Wait, for only specified milliseconds, for the process to finish.
 
 **Parameters**
 
-<a name="m-wait-Integer-p-millisec"></a>
+<a name="m-wait-int-p-millisec"></a>
 - **millisec**
 The duration, in millisec, to wait for the process to finish.
 
 **Returns**
 
-<a name="m-wait-Integer-r"></a>True if the process ran to the end within the specified waiting duration.
+<a name="m-wait-int-r"></a>True if the process ran to the end within the specified waiting duration.
 
 <a name="m-isAlive-void"></a>
-### <code>public Bool isAlive()</code>
-Check if the process is alive. This method will return true only before <a href="broken-link">start()</a>, or after either <a href="broken-link">wait()</a>/<a href="broken-link">kill()</a> is called.
+### <code>public bool isAlive()</code>
+Check if the process is alive. This method will return true only before <a href="../System/Process#m-start-void">start()</a>, or after either <a href="../System/Process#m-wait-void">wait()</a> or <a href="../System/Process#m-kill-void">kill()</a> is called.
 
 **Returns**
 
 <a name="m-isAlive-void-r"></a>True if the process is still running.
 
 <a name="m-kill-void"></a>
-### <code>public Integer kill()</code>
+### <code>public int kill()</code>
 Kill the process.
 
 **Returns**
@@ -164,7 +164,7 @@ Kill the process.
 if the process <a href="../System/ProcessState#e-NOT_STARTED">has not started yet</a>.
 
 <a name="m-getExitCode-void"></a>
-### <code>public Integer getExitCode()</code>
+### <code>public int getExitCode()</code>
 
 
 **Returns**

@@ -5,14 +5,14 @@ Enum is a special class type which defines an ordered enumeration of names, each
 ## All Members
 |**Type**|**Name**|**Signature**
 |:-------|:-------|:------------
-|*field*<font color="#FF9900"><sup>C</sup></font>|<a href="#f-ordinal"><b>ordinal</b></a>|`public const Integer ordinal`
+|*field*<font color="#FF9900"><sup>C</sup></font>|<a href="#f-ordinal"><b>ordinal</b></a>|`public const int ordinal`
 |*field*<font color="#FF9900"><sup>C</sup></font>|<a href="#f-literal"><b>literal</b></a>|`public const String literal`
 
 ## Constructors
 
 ## Fields
 <a name="f-ordinal"></a>
-### <code>public const Integer ordinal</code>
+### <code>public const int ordinal</code>
 The integer value associated with this member.<a name="f-literal"></a>
 ### <code>public const String literal</code>
 The name of this member, exactly as is defined in the type's definition.

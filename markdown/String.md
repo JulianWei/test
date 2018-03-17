@@ -5,139 +5,139 @@ String represents a fixed array of characters.<br><br>String is a very special c
 ## All Members
 |**Type**|**Name**|**Signature**
 |:-------|:-------|:------------
-|*field*<font color="#FF9900"><sup>C</sup></font>|<a href="#f-length"><b>length</b></a>|`public const Integer length`
-|*method*|<a href="#m-contains-Any"><b>contains</b></a>|`public Bool contains(Any)`
-|*method*|<a href="#m-endsWith-Any"><b>endsWith</b></a>|`public Bool endsWith(Any)`
-|*method*|<a href="#m-startsWith-Any"><b>startsWith</b></a>|`public Bool startsWith(Any)`
-|*method*|<a href="#m-indexOf-Any-Integer"><b>indexOf</b></a>|`public Integer indexOf(Any, Integer)`
-|*method*|<a href="#m-firstOf-Any"><b>firstOf</b></a>|`public Integer firstOf(Any)`
-|*method*|<a href="#m-substring-Integer-Integer"><b>substring</b></a>|`public String substring(Integer, Integer)`
+|*field*<font color="#FF9900"><sup>C</sup></font>|<a href="#f-length"><b>length</b></a>|`public const int length`
+|*method*|<a href="#m-contains-var"><b>contains</b></a>|`public bool contains(var)`
+|*method*|<a href="#m-endsWith-var"><b>endsWith</b></a>|`public bool endsWith(var)`
+|*method*|<a href="#m-startsWith-var"><b>startsWith</b></a>|`public bool startsWith(var)`
+|*method*|<a href="#m-indexOf-var-int"><b>indexOf</b></a>|`public int indexOf(var, int)`
+|*method*|<a href="#m-firstOf-var"><b>firstOf</b></a>|`public int firstOf(var)`
+|*method*|<a href="#m-substring-int-int"><b>substring</b></a>|`public String substring(int, int)`
 |*method*|<a href="#m-trim-void"><b>trim</b></a>|`public String trim()`
 |*method*|<a href="#m-toLower-void"><b>toLower</b></a>|`public String toLower()`
 |*method*|<a href="#m-toUpper-void"><b>toUpper</b></a>|`public String toUpper()`
-|*method*|<a href="#m-split-Any"><b>split</b></a>|`public String split(Any)`
+|*method*|<a href="#m-split-var"><b>split</b></a>|`public String split(var)`
 
 ## Constructors
 
 ## Fields
 <a name="f-length"></a>
-### <code>public const Integer length</code>
+### <code>public const int length</code>
 The length of this string.
 ## Methods
-<a name="m-contains-Any"></a>
-### <code>public Bool contains([Any](../Any) *search*)</code>
+<a name="m-contains-var"></a>
+### <code>public bool contains([var](../Any) *search*)</code>
 Check if the string contains the given string or character.
 
 **Parameters**
 
-<a name="m-contains-Any-p-search"></a>
+<a name="m-contains-var-p-search"></a>
 - **search**
 The sub-string, or a single chracater, to search within this string. Note this method is special in that it can take two different types.
 
 **Returns**
 
-<a name="m-contains-Any-r"></a>true if the searched string/character is found.
+<a name="m-contains-var-r"></a>true if the searched string/character is found.
 
 **Throws**
 
 - [System.TypeIncompatibleException](System/TypeIncompatibleException)
 if the parameter has a type which is neither string nor char.
 
-<a name="m-endsWith-Any"></a>
-### <code>public Bool endsWith([Any](../Any) *suffix*)</code>
+<a name="m-endsWith-var"></a>
+### <code>public bool endsWith([var](../Any) *suffix*)</code>
 Check if the string is ended with the given string or character.
 
 **Parameters**
 
-<a name="m-endsWith-Any-p-suffix"></a>
+<a name="m-endsWith-var-p-suffix"></a>
 - **suffix**
 The sub-string, or a single chracater, to match to the end of this string. Note this method is special in that it can take two different types.
 
 **Returns**
 
-<a name="m-endsWith-Any-r"></a>true if the given string/character is matched to the ending sequence of this string.
+<a name="m-endsWith-var-r"></a>true if the given string/character is matched to the ending sequence of this string.
 
 **Throws**
 
 - [System.TypeIncompatibleException](System/TypeIncompatibleException)
 if the parameter has a type which is neither string nor char.
 
-<a name="m-startsWith-Any"></a>
-### <code>public Bool startsWith([Any](../Any) *prefix*)</code>
+<a name="m-startsWith-var"></a>
+### <code>public bool startsWith([var](../Any) *prefix*)</code>
 Check if the string is started with the given string or character.
 
 **Parameters**
 
-<a name="m-startsWith-Any-p-prefix"></a>
+<a name="m-startsWith-var-p-prefix"></a>
 - **prefix**
 The sub-string, or a single chracater, to match to the start of this string. Note this method is special in that it can take two different types.
 
 **Returns**
 
-<a name="m-startsWith-Any-r"></a>true if the given string/character is matched to the starting sequence of this string.
+<a name="m-startsWith-var-r"></a>true if the given string/character is matched to the starting sequence of this string.
 
 **Throws**
 
 - [System.TypeIncompatibleException](System/TypeIncompatibleException)
 if the parameter has a type which is neither string nor char.
 
-<a name="m-indexOf-Any-Integer"></a>
-### <code>public Integer indexOf([Any](../Any) *search*, [Integer](../Integer) *offset*)</code>
-Get the starting index (0-based) of the given string or character within this string.<br><br>If only checking for the existence within the entire string, consider using <a href="../String">contains()</a> instead.
+<a name="m-indexOf-var-int"></a>
+### <code>public int indexOf([var](../Any) *search*, [int](../Integer) *offset*)</code>
+Get the starting index (0-based) of the given string or character within this string.<br><br>If only checking for the existence within the entire string, consider using <a href="../String#m-contains-var">contains()</a> instead.
 
 **Parameters**
 
-<a name="m-indexOf-Any-Integer-p-search"></a>
+<a name="m-indexOf-var-int-p-search"></a>
 - **search**
 The sub-string, or a single chracater, to search with this string. Note this method is special in that it can take two different types.
-<a name="m-indexOf-Any-Integer-p-offset"></a>
+<a name="m-indexOf-var-int-p-offset"></a>
 - **offset**
 The index on the this string from which the search will be performed.
 
 **Returns**
 
-<a name="m-indexOf-Any-Integer-r"></a>If a non-negative value, it's the index marking the start of the first occurence of the given string/character; if negative, the given stirng/chracter doesn't exist.
+<a name="m-indexOf-var-int-r"></a>If a non-negative value, it's the index marking the start of the first occurence of the given string/character; if negative, the given stirng/chracter doesn't exist.
 
 **Throws**
 
 - [System.TypeIncompatibleException](System/TypeIncompatibleException)
 if the parameter has a type which is neither string nor char.
 
-<a name="m-firstOf-Any"></a>
-### <code>public Integer firstOf([Any](../Any) *search*)</code>
-Get the starting index (0-based) of the first occurence of the given string or character within this string.<br><br>To search only within a certain scope of this string, call <a href="../String">indexOf()</a> instead.
+<a name="m-firstOf-var"></a>
+### <code>public int firstOf([var](../Any) *search*)</code>
+Get the starting index (0-based) of the first occurence of the given string or character within this string.<br><br>To search only within a certain scope of this string, call <a href="../String#m-indexOf-var-int">indexOf()</a> instead.
 
 **Parameters**
 
-<a name="m-firstOf-Any-p-search"></a>
+<a name="m-firstOf-var-p-search"></a>
 - **search**
 The sub-string, or a single chracater, to search with this string. Note this method is special in that it can take two different types.
 
 **Returns**
 
-<a name="m-firstOf-Any-r"></a>If a non-negative value, it's the index marking the start of the first occurence of the given string/character; if negative, the given stirng/chracter doesn't exist.
+<a name="m-firstOf-var-r"></a>If a non-negative value, it's the index marking the start of the first occurence of the given string/character; if negative, the given stirng/chracter doesn't exist.
 
 **Throws**
 
 - [System.TypeIncompatibleException](System/TypeIncompatibleException)
 if the parameter has a type which is neither string nor char.
 
-<a name="m-substring-Integer-Integer"></a>
-### <code>public String substring([Integer](../Integer) *start*, [Integer](../Integer) *end*)</code>
+<a name="m-substring-int-int"></a>
+### <code>public String substring([int](../Integer) *start*, [int](../Integer) *end*)</code>
 Get a substring out of this string.
 
 **Parameters**
 
-<a name="m-substring-Integer-Integer-p-start"></a>
+<a name="m-substring-int-int-p-start"></a>
 - **start**
 The starting index (inclusive).
-<a name="m-substring-Integer-Integer-p-end"></a>
+<a name="m-substring-int-int-p-end"></a>
 - **end**
 The ending index (exclusive).
 
 **Returns**
 
-<a name="m-substring-Integer-Integer-r"></a>A substring out of this string.
+<a name="m-substring-int-int-r"></a>A substring out of this string.
 
 **Throws**
 
@@ -168,17 +168,17 @@ Convert the string to upper case.
 
 <a name="m-toUpper-void-r"></a>A string with same characters, except in upper case.
 
-<a name="m-split-Any"></a>
-### <code>public String split([Any](../Any) *splitter*)</code>
+<a name="m-split-var"></a>
+### <code>public String split([var](../Any) *splitter*)</code>
 Split the string into multiple substrings at the specified boundary.
 
 **Parameters**
 
-<a name="m-split-Any-p-splitter"></a>
+<a name="m-split-var-p-splitter"></a>
 - **splitter**
 The boundary to split at, which is not included into the resultant substrings.
 
 **Returns**
 
-<a name="m-split-Any-r"></a>An array of strings split out of this string.
+<a name="m-split-var-r"></a>An array of strings split out of this string.
 

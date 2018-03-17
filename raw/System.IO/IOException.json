@@ -8,7 +8,7 @@
     {
       "params": [
         {
-          "summary": "",
+          "summary": "The message for this exception.",
           "type": {
             "simpleName": "string",
             "dimension": 0
@@ -18,7 +18,7 @@
       "exceptions": [],
       "isStatic": false,
       "visibility": "PUBLIC",
-      "summary": "Create an IOException with specified message.\u003cbr\u003e\u003cbr\u003e[message] The message for this exception.",
+      "summary": "Create an IOException with specified message.",
       "references": []
     }
   ],

@@ -8,12 +8,12 @@ A program thread.<br><br>A thread is a light-weight execution unit within a proc
 |*constructor*|<a href="#c-Thread-Function-string-ThreadPriority"><b>Thread</b></a>|`public Thread(Function, string, System.Concurrency.ThreadPriority)`
 |*method*<font color="#800080"><sup>S</sup></font>|<a href="#m-create-Function"><b>create</b></a>|`public static Thread create(Function)`
 |*method*|<a href="#m-getName-void"><b>getName</b></a>|`public String getName()`
-|*method*|<a href="#m-start-void"><b>start</b></a>|`public Void start()`
-|*method*|<a href="#m-join-void"><b>join</b></a>|`public Void join()`
-|*method*|<a href="#m-interrupt-void"><b>interrupt</b></a>|`public Void interrupt()`
+|*method*|<a href="#m-start-void"><b>start</b></a>|`public void start()`
+|*method*|<a href="#m-join-void"><b>join</b></a>|`public void join()`
+|*method*|<a href="#m-interrupt-void"><b>interrupt</b></a>|`public void interrupt()`
 |*method*<font color="#800080"><sup>S</sup></font>|<a href="#m-getCurrent-void"><b>getCurrent</b></a>|`public static Thread getCurrent()`
-|*method*<font color="#800080"><sup>S</sup></font>|<a href="#m-sleep-Integer"><b>sleep</b></a>|`public static Bool sleep(Integer)`
-|*method*<font color="#800080"><sup>S</sup></font>|<a href="#m-checkInterruption-void"><b>checkInterruption</b></a>|`public static Bool checkInterruption()`
+|*method*<font color="#800080"><sup>S</sup></font>|<a href="#m-sleep-int"><b>sleep</b></a>|`public static bool sleep(int)`
+|*method*<font color="#800080"><sup>S</sup></font>|<a href="#m-checkInterruption-void"><b>checkInterruption</b></a>|`public static bool checkInterruption()`
 |*method*|<a href="#m-getState-void"><b>getState</b></a>|`public ThreadState getState()`
 
 ## Constructors
@@ -46,7 +46,7 @@ Get the name of this thread.
 <a name="m-getName-void-r"></a>Thread's name.
 
 <a name="m-start-void"></a>
-### <code>public Void start()</code>
+### <code>public void start()</code>
 Start the thread.<br><br>Calling this on the current thread will throw <a href="../System/IllegalStateException">IllegalStateException</a>.
 
 **Returns**
@@ -54,7 +54,7 @@ Start the thread.<br><br>Calling this on the current thread will throw <a href="
 <a name="m-start-void-r"></a>
 
 <a name="m-join-void"></a>
-### <code>public Void join()</code>
+### <code>public void join()</code>
 Wait until the specified thread is finished.<br><br>This method will block until the thread finishes. Calling this on the current thread will throw <a href="../System/IllegalStateException">IllegalStateException</a>.
 
 **Returns**
@@ -62,7 +62,7 @@ Wait until the specified thread is finished.<br><br>This method will block until
 <a name="m-join-void-r"></a>
 
 <a name="m-interrupt-void"></a>
-### <code>public Void interrupt()</code>
+### <code>public void interrupt()</code>
 Send interruption signal to this thread.<br><br>Note the receiving thread must have logic to check this and react accordingly. The sender must not assume such logic exists and therefore shall not solely rely on this to coordinate inter-thread works.
 
 **Returns**
@@ -77,22 +77,22 @@ Get the Thread object for the currently running thread.
 
 <a name="m-getCurrent-void-r"></a>The thread object representing the current thread (the one on which this method is called)
 
-<a name="m-sleep-Integer"></a>
-### <code>public static Bool sleep([Integer](../../Integer) *periodInMillisec*)</code>
+<a name="m-sleep-int"></a>
+### <code>public static bool sleep([int](../../Integer) *periodInMillisec*)</code>
 Let the current thread sleep for specified duration.
 
 **Parameters**
 
-<a name="m-sleep-Integer-p-periodInMillisec"></a>
+<a name="m-sleep-int-p-periodInMillisec"></a>
 - **periodInMillisec**
 sleep duration in milliseconds
 
 **Returns**
 
-<a name="m-sleep-Integer-r"></a>true if interrupted, with the interruption flag reset; false if time is up.
+<a name="m-sleep-int-r"></a>true if interrupted, with the interruption flag reset; false if time is up.
 
 <a name="m-checkInterruption-void"></a>
-### <code>public static Bool checkInterruption()</code>
+### <code>public static bool checkInterruption()</code>
 Check if the thread has been interrupted. Also reset the interruption flag.
 
 **Returns**

@@ -14,7 +14,7 @@ This class represents a promise that a certain operation will eventually arrive 
 |*method*|<a href="#m-then-Function"><b>then</b></a>|`public Promise then(Function)`
 |*method*|<a href="#m-error-Function"><b>error</b></a>|`public Promise error(Function)`
 |*method*|<a href="#m-fin-Function"><b>fin</b></a>|`public Promise fin(Function)`
-|*method*|<a href="#m-getResult-Bool"><b>getResult</b></a>|`public (unknown) getResult(Bool)`
+|*method*|<a href="#m-getResult-bool"><b>getResult</b></a>|`public (unknown) getResult(bool)`
 |*method*|<a href="#m-toString-void"><b>toString</b></a>|`public String toString()`
 
 ## Constructors
@@ -109,19 +109,19 @@ The function to continue upon completion
 
 <a name="m-fin-Function-r"></a>A new promise within which the given function is invoked.
 
-<a name="m-getResult-Bool"></a>
-### <code>public (unknown) getResult([Bool](../../Bool) *throwOnError*)</code>
+<a name="m-getResult-bool"></a>
+### <code>public (unknown) getResult([bool](../../Bool) *throwOnError*)</code>
 Get the result or faulting exception of this promise.<br><br>This method will block if the promise has not completed yet.
 
 **Parameters**
 
-<a name="m-getResult-Bool-p-throwOnError"></a>
+<a name="m-getResult-bool-p-throwOnError"></a>
 - **throwOnError**
 true to re-throw the faulting exception if the promise rejected.
 
 **Returns**
 
-<a name="m-getResult-Bool-r"></a>the result, or exception in case of rejection.
+<a name="m-getResult-bool-r"></a>the result, or exception in case of rejection.
 
 <a name="m-toString-void"></a>
 ### <code>public String toString()</code>
