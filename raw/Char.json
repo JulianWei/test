@@ -1,0 +1,6 @@
+{
+  "alias": "char",
+  "name": "Char",
+  "summary": "The char type in Julian language. A char value corresponds to the literal representation of the code point on ASCII table.\u003cbr\u003e\u003cbr\u003eIn Julian, the char value can be written in literal form quoted with single quote (\u0027). Usually a single character is enclosed by \u0027 and \u0027, but it\u0027s also possible to use back-slash (\\) to escape certain control chracaters, among them line feed (\\r), carriage return (\\n), horizontal tabulation (\\t), nul (\\0). One can also use octal representation for a character, which takes the form of \u0027\\NNN\u0027, where N is a digit tnat is between 0 and 7. Note the max value is \u0027~\u0027 (or 126 if cast to a byte or an integer).\u003cbr\u003e\u003cbr\u003echar type can be hard-cast to byte or integer value as the index of its code point on ASCII table. For example, \u0027a\u0027 has a numerical value of 97.\u003cbr\u003e\u003cbr\u003echar type can be concatenated to other characters or string value with \u0027+\u0027 operator in the literal form of this value.\u003cbr\u003e\u003cbr\u003echar is a primitive type. Therefore it can only be assigned to a variable with same type or an [untyped](Any) variable.",
+  "references": []
+}

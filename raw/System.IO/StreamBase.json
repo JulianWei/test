@@ -1,0 +1,248 @@
+{
+  "ctors": [],
+  "fields": [],
+  "interfaces": [
+    {
+      "moduleName": "System.IO",
+      "simpleName": "Stream",
+      "dimension": 0
+    }
+  ],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "The byte read from the stream. -1 if reaching the end.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "read",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eRead one byte from the stream.\u003cbr\u003e\u003cbr\u003eThis will move forward the stream pointer by one. If [canRead()](#canRead) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The count of bytes read from the stream. -1 if reaching the end without any bytes read.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The byte buffer to hold the data to be read from the stream.",
+          "type": {
+            "simpleName": "Byte",
+            "dimension": 1
+          }
+        },
+        {
+          "summary": "The offset on buffer to start filling the data in.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The desired number of bytes to read.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "read",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eTry to read [desired number](param: count) of bytes from the stream into the given buffer, starting from the [offset](param: offset) and not exceeding the buffer\u0027s capacity. This will move forward the stream pointer by the number of bytes actually read. If the stream hits the end, or the buffer runs short of room, before reading the specified count, only those bytes will be read, making the returned value less than the count argument.\u003cbr\u003e\u003cbr\u003eThis method moves forward the stream pointer by the count equal to returned value. If [canRead()](#canRead) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The single byte to write to this stream.",
+          "type": {
+            "simpleName": "Byte",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "write",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eWrite one byte to the stream.\u003cbr\u003e\u003cbr\u003eThis will move forward the stream pointer by one. If [canWrite()](#canWrite) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The count of bytes written to the stream. 0 if no bytes have been written.",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The byte buffer which holds the data to write into the stream.",
+          "type": {
+            "simpleName": "Byte",
+            "dimension": 1
+          }
+        },
+        {
+          "summary": "The offset on the buffer from which the data will be pulled.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The desired number of bytes to write.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "write",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eTry to write [desired number](param: count) of bytes into the stream from the given buffer, starting from the [offset](param: offset) and not exceeding the buffer\u0027s capacity. This will move forward the stream pointer by the number of bytes actually read. If the buffer hits the end before reading the specified count, only those bytes will be written, making the returned value less than the count argument.\u003cbr\u003e\u003cbr\u003eThis method moves forward the stream pointer by the count equal to returned value. If [canWrite()](#canWrite) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "close",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eClose the stream. Once the stream is closed it cannot be re-opened.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "flush",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eFlush the stream. This will materialize all the data copy which may so far have only occurred inside in-memory data buffer, which is usually an implementation detail of the stream. It\u0027s best practice for the user to call this method between writing calls, as well as at the conclusion of data copy logic, to ensure all the data have effectively flown into the sink.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The count of bytes skipped.  -1 if reaching the end without any bytes skipped.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The desired number of bytes to skip.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "skip",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eInstead of reading, try to skip [desired number](param: count) of bytes from the stream. This will move forward the stream pointer by the number of bytes actually read. If the stream hits the end before reading the specified count, only those bytes will be skipped, making the returned value less than the count argument.\u003cbr\u003e\u003cbr\u003eThis method moves forward the stream pointer by the count equal to returned value. If [canRead()](#canRead) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "mark",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eMark the current position of stream. Calling [reset()](#reset) will move the stream pointer to the marked position.\u003cbr\u003e\u003cbr\u003eIf [canMark()](#canMark) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "reset",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eMove the stream pointer to the position marked by [mark()](#mark).\u003cbr\u003e\u003cbr\u003eIf [canMark()](#canMark) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "canMark",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eWhether this stream supports writing. This method governs [mark](#mark), [reset](#reset).",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "StreamBase",
+  "visibility": "PUBLIC",
+  "summary": "A stream class base that implements most interface details. The subclasses need only implement that actual the I/O operation.\u003cbr\u003e\u003cbr\u003eThis stream doesn\u0027t support marking.",
+  "references": []
+}

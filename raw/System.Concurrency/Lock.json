@@ -1,0 +1,114 @@
+{
+  "ctors": [
+    {
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a new lock.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "lock",
+      "visibility": "PUBLIC",
+      "summary": "Apply the lock from the place where this is called.\u003cbr\u003e\u003cbr\u003eIf the lock is held by other threads, this method will block until the lock is secured.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "unlock",
+      "visibility": "PUBLIC",
+      "summary": "Release the lock. Throw [IllegalStateException](System.IllegalStateException) if the lock is not owned by the current thread.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "true if the waiting was interrupted and this thread failed to obtain the lock;false if the lock was successfully acquired.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "wait",
+      "visibility": "PUBLIC",
+      "summary": "Wait until acquiring the lock or getting interrupted.\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "return time spent on waiting in millisec, which must be less than [the argument](param: milliSec);or 0 if timed out, or -1 if getting interrupted.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The time to wait on this lock, in milliseconds.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "wait",
+      "visibility": "PUBLIC",
+      "summary": "Wait until acquiring the lock, timing out, or getting interrupted.\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "notify",
+      "visibility": "PUBLIC",
+      "summary": "Notify all the other threads waiting on the lock. The platform will make an arbitrary decision on who will be holding the lock next.\u003cbr\u003e\u003cbr\u003eThrow [IllegalStateException](System.IllegalStateException) if the lock is not owned by the current thread.",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "Lock",
+  "visibility": "PUBLIC",
+  "summary": "A process-wide lock that controls access to a certain region in code block.\u003cbr\u003e\u003cbr\u003eJulian provides language-level support for using a lock:\u003cbr\u003e\u003cbr\u003e[code]\n   var mylck \u003d new Lock();\n   lock (mylck) {\n     ... ... // critical region guarded by the lock.\n   }[code: end]",
+  "references": []
+}

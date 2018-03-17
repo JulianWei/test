@@ -1,0 +1,25 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a standard NullReferenceException instance. The message for this exception is fixed.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "NullReferenceException",
+  "visibility": "PUBLIC",
+  "summary": "Exception caused by attempting to dereference a variable that is null. This can be created by the engine when it is trying to dereference a null variable or intermediate value, but a user may also create this exception pre-emptively as part of the argument check.",
+  "references": []
+}

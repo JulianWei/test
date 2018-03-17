@@ -1,0 +1,31 @@
+{
+  "fields": [
+    {
+      "type": {
+        "simpleName": "String",
+        "dimension": 0
+      },
+      "isConst": false,
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "The class/interface name to map to. This name must be a fully qualified name and the type is expected to be loaded into JVM on demand.",
+      "references": []
+    },
+    {
+      "type": {
+        "simpleName": "String",
+        "dimension": 0
+      },
+      "isConst": false,
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "The method name to map to. This is currently not supported.",
+      "references": []
+    }
+  ],
+  "subtype": "ATTRIBUTE",
+  "name": "Mapped",
+  "visibility": "PUBLIC",
+  "summary": "A class or interface marked by this attribute is mapped directly to a platform class or interface.\u003cbr\u003e\u003cbr\u003eA class maps to a platform class and an interface maps to a platform interface. Only public constructors and methods are mapped, plus any constant static fields (which are marked as \u0027final\u0027 in Java). The platform\u0027s typing hierarchy will also be mirrored. Throughout the runtime the instance of a mapped class is essentially a wrapper of the underlying instance.\u003cbr\u003e\u003cbr\u003eThis approach allows a convenient and easy-to-use platform inter-operation at the price of performance. As of current version, this is the only way for ordinary users to talk to JVM classes.",
+  "references": []
+}

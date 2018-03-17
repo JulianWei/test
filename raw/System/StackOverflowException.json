@@ -1,0 +1,25 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a platform class running exception with fixed message. While entirely legal, it\u0027s not recommended for a user to create such instances.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "StackOverflowException",
+  "visibility": "PUBLIC",
+  "summary": "The thread stack hits the limit and thus new frame cannot be allocated.\u003cbr\u003e\u003cbr\u003eThis is a fundamental system error and can be thrown anytime during the runtime, not necessarily where a function is called. At the point of this failure there is no guarantee that the engine can continue to function normally so there is no point of capturing it. In fact this exception won\u0027t be caught by catch block.",
+  "references": []
+}

@@ -1,0 +1,33 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create an instance of UnknownTypeException with specified message. Mainly reserved for system use.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "UnknownTypeException",
+  "visibility": "PUBLIC",
+  "summary": "The type being referred to is not known to the script engine.\u003cbr\u003e\u003cbr\u003eIn Julian, when a type is first used it will be loaded. The type searching is performed against the current namespace pool, targeting the entire module path set, in addition to the system classes. The namespace pool consists of all the imported module\u0027s name, as well as System module. If the type is not located under any of these modules this exception will be thrown.",
+  "references": []
+}

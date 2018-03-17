@@ -1,0 +1,271 @@
+{
+  "ctors": [],
+  "fields": [],
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "String",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "setWorkingDir",
+      "visibility": "PUBLIC",
+      "summary": "Set working directory of the process.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getWorkingDir",
+      "visibility": "PUBLIC",
+      "summary": "Get working directory of the process.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "if true, the subprocess will inherit the I/O channels from the parent process.",
+          "type": {
+            "simpleName": "Bool",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "setInheritedIO",
+      "visibility": "PUBLIC",
+      "summary": "Set if the process will inherit the I/O channels from the parent process.\u003cbr\u003e\u003cbr\u003eIf inheriting, the process simply directs its standard I/O to the corresponding channels used by the parent process. However, this behavior can be overwritten by explicitly setting a stream to a particular channel, such as [setInputStream](#setInputStream).\u003cbr\u003e\u003cbr\u003eIf intending to redirect I/O from the current process, i.e. programmatically write to the process\u0027s input and read from the output, must not set this to true.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "false if not inheriting.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "isInheritedIO",
+      "visibility": "PUBLIC",
+      "summary": "Get if the process is inheriting the I/O channels from the parent process.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The variable\u0027s name.",
+          "type": {
+            "simpleName": "String",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The variable\u0027s value.",
+          "type": {
+            "simpleName": "String",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "addEnvArg",
+      "visibility": "PUBLIC",
+      "summary": "Add an environment variable to the process.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Map",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getEnvArgs",
+      "visibility": "PUBLIC",
+      "summary": "Get a map whihc contains all environment variables, with their names as the key.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "A stream to send input to the process. The stream must be readable.",
+          "type": {
+            "simpleName": "Stream",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "setInputStream",
+      "visibility": "PUBLIC",
+      "summary": "Set an input stream to be used as the standard input from within the process.\u003cbr\u003e\u003cbr\u003eSetting this value will overwrite the inherited standard input stream by setting [inherited IO](#setInheritedIO).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "A stream to take output out of the process. The stream must be writable.",
+          "type": {
+            "simpleName": "Stream",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "setOutputStream",
+      "visibility": "PUBLIC",
+      "summary": "Set an output stream to be used as the standard output from within the process.\u003cbr\u003e\u003cbr\u003eSetting this value will overwrite the inherited standard output stream by setting [inherited IO](#setInheritedIO).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "A stream to take error output out of the process. The stream must be writable.",
+          "type": {
+            "simpleName": "Stream",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "setErrorStream",
+      "visibility": "PUBLIC",
+      "summary": "Set an output stream to be used as the standard error from within the process.\u003cbr\u003e\u003cbr\u003eSetting this value will overwrite the inherited standard error stream by setting [inherited IO](#setInheritedIO).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "Null if not set.",
+        "type": {
+          "simpleName": "Stream",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getInputStream",
+      "visibility": "PUBLIC",
+      "summary": "Get the input stream which was set by [setInputStream].",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "Null if not set.",
+        "type": {
+          "simpleName": "Stream",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getOutputStream",
+      "visibility": "PUBLIC",
+      "summary": "Get the output stream which was set by [setOutputStream].",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "Null if not set.",
+        "type": {
+          "simpleName": "Stream",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getErrorStream",
+      "visibility": "PUBLIC",
+      "summary": "Get the output stream which was set by [setErrorStream].",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "ProcessConfig",
+  "visibility": "PUBLIC",
+  "summary": "The configuration set to use when spawning a process.\u003cbr\u003e\u003cbr\u003eThe configuration object must be fully set before it\u0027s used to start a process. Once the process is started any new changes to this object won\u0027t affect the behavior of the running process.",
+  "references": []
+}

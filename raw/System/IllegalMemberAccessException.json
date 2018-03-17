@@ -1,0 +1,39 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create an instance of IllegalMemberAccessException with specified message. Mainly reserved for system use.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "IllegalMemberAccessException",
+  "visibility": "PUBLIC",
+  "summary": "The exception thrown as a result of trying to access a class member in an illegal way. The visibility check is the most common reason for this exception.",
+  "references": [
+    {
+      "moduleName": "System",
+      "simpleName": "UnknownMemberException",
+      "dimension": 0
+    }
+  ]
+}

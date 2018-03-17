@@ -1,0 +1,294 @@
+{
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "name": "",
+        "summary": "The byte read from the stream. -1 if reaching the end.",
+        "type": {
+          "simpleName": "Byte",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "read",
+      "visibility": "PUBLIC",
+      "summary": "Read one byte from the stream.\u003cbr\u003e\u003cbr\u003eThis will move forward the stream pointer by one. If [canRead()](#canRead) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "The count of bytes read from the stream. -1 if reaching the end without any bytes read.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "name": "buffer",
+          "summary": "The byte buffer to hold the data to be read from the stream.",
+          "type": {
+            "simpleName": "Byte",
+            "dimension": 1
+          }
+        },
+        {
+          "name": "offset",
+          "summary": "The offset on buffer to start filling the data in.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        },
+        {
+          "name": "count",
+          "summary": "The desired number of bytes to read.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "read",
+      "visibility": "PUBLIC",
+      "summary": "Try to read [desired number](param: count) of bytes from the stream into the given buffer, starting from the [offset](param: offset) and not exceeding the buffer\u0027s capacity. This will move forward the stream pointer by the number of bytes actually read. If the stream hits the end, or the buffer runs short of room, before reading the specified count, only those bytes will be read, making the returned value less than the count argument.\u003cbr\u003e\u003cbr\u003eThis method moves forward the stream pointer by the count equal to returned value. If [canRead()](#canRead) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "name": "data",
+          "summary": "The single byte to write to this stream.",
+          "type": {
+            "simpleName": "Byte",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "write",
+      "visibility": "PUBLIC",
+      "summary": "Write one byte to the stream.\u003cbr\u003e\u003cbr\u003eThis will move forward the stream pointer by one. If [canWrite()](#canWrite) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "The count of bytes written to the stream. 0 if no bytes have been written.",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "name": "buffer",
+          "summary": "The byte buffer which holds the data to write into the stream.",
+          "type": {
+            "simpleName": "Byte",
+            "dimension": 1
+          }
+        },
+        {
+          "name": "offset",
+          "summary": "The offset on the buffer from which the data will be pulled.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        },
+        {
+          "name": "count",
+          "summary": "The desired number of bytes to write.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "write",
+      "visibility": "PUBLIC",
+      "summary": "Try to write [desired number](param: count) of bytes into the stream from the given buffer, starting from the [offset](param: offset) and not exceeding the buffer\u0027s capacity. This will move forward the stream pointer by the number of bytes actually read. If the buffer hits the end before reading the specified count, only those bytes will be written, making the returned value less than the count argument.\u003cbr\u003e\u003cbr\u003eThis method moves forward the stream pointer by the count equal to returned value. If [canWrite()](#canWrite) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "close",
+      "visibility": "PUBLIC",
+      "summary": "Close the stream. Once the stream is closed it cannot be re-opened.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "flush",
+      "visibility": "PUBLIC",
+      "summary": "Flush the stream. This will materialize all the data copy which may so far have only occurred inside in-memory data buffer, which is usually an implementation detail of the stream. It\u0027s best practice for the user to call this method between writing calls, as well as at the conclusion of data copy logic, to ensure all the data have effectively flown into the sink.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "mark",
+      "visibility": "PUBLIC",
+      "summary": "Mark the current position of stream. Calling [reset()](#reset) will move the stream pointer to the marked position.\u003cbr\u003e\u003cbr\u003eIf [canMark()](#canMark) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "reset",
+      "visibility": "PUBLIC",
+      "summary": "Move the stream pointer to the position marked by [mark()](#mark).\u003cbr\u003e\u003cbr\u003eIf [canMark()](#canMark) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "The count of bytes skipped.  -1 if reaching the end without any bytes skipped.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "name": "count",
+          "summary": "The desired number of bytes to skip.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "skip",
+      "visibility": "PUBLIC",
+      "summary": "Instead of reading, try to skip [desired number](param: count) of bytes from the stream. This will move forward the stream pointer by the number of bytes actually read. If the stream hits the end before reading the specified count, only those bytes will be skipped, making the returned value less than the count argument.\u003cbr\u003e\u003cbr\u003eThis method moves forward the stream pointer by the count equal to returned value. If [canRead()](#canRead) return false, this method will throw [IOException](System.IO.IOException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "canRead",
+      "visibility": "PUBLIC",
+      "summary": "Whether this stream supports reading. This method governs [read](#read), [skip](#skip).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "canWrite",
+      "visibility": "PUBLIC",
+      "summary": "Whether this stream supports writing. This method governs [write](#write).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "canMark",
+      "visibility": "PUBLIC",
+      "summary": "Whether this stream supports writing. This method governs [mark](#mark), [reset](#reset).",
+      "references": []
+    }
+  ],
+  "subtype": "INTERFACE",
+  "name": "Stream",
+  "visibility": "PUBLIC",
+  "summary": "An abstraction of data origin/sink. A stream can support up to three types of operations: reading, writing and repositioning. The user may query these capabilities before using a stream, but can also opt to proceed without pre-checking if willing to handle the error.\u003cbr\u003e\u003cbr\u003eAn internal pointer is pointing to the position within the stream where the next operation will start from. If the stream doesn\u0027t support repositioning, this pointer will only move forward.",
+  "references": []
+}

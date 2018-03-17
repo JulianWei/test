@@ -1,0 +1,214 @@
+{
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "The path to this file.",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a new file with the specified path.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [
+    {
+      "moduleName": "System.IO",
+      "simpleName": "Item",
+      "dimension": 0
+    }
+  ],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "isFile",
+      "visibility": "PUBLIC",
+      "summary": "Return true.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getName",
+      "visibility": "PUBLIC",
+      "summary": "Get the name of this file. This is only the simple name (with extension part) under the path.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getPath",
+      "visibility": "PUBLIC",
+      "summary": "Get the absolute path of this file. This doesn\u0027t include the name.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The contains from this file, in the format of plain ASCII text.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "readAllText",
+      "visibility": "PUBLIC",
+      "summary": "Read all contents from this file as text. This is rather convenient method for quick scripting, but won\u0027t scale well if the file is too large and the operation is too frequent. When dealing with reading large files at high frequency, always consider using an [asynchronous stream](#getReadStream) first.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "True if the file exists.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "exists",
+      "visibility": "PUBLIC",
+      "summary": "Whether this file exist on file system.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "True if the file was created; false if the file already exists.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [
+        {
+          "summary": "An error occurred during file creation.",
+          "type": {
+            "moduleName": "System.IO",
+            "simpleName": "IOException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "create",
+      "visibility": "PUBLIC",
+      "summary": "Create a file represented by this object.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "True if the file was successfully deleted; false if the file didn\u0027t exist.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [
+        {
+          "summary": "An error occurred during file deletion.",
+          "type": {
+            "moduleName": "System.IO",
+            "simpleName": "IOException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "delete",
+      "visibility": "PUBLIC",
+      "summary": "Delete this file.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A stream that supports reading (both synchronously and asynchronously) but not writing or marking.",
+        "type": {
+          "simpleName": "Stream",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getReadStream",
+      "visibility": "PUBLIC",
+      "summary": "Get a stream to read from this file.\u003cbr\u003e\u003cbr\u003e[see System.IO.FileStream]",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A stream that supports writing but not reading or marking.",
+        "type": {
+          "simpleName": "Stream",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "Bool",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getWriteStream",
+      "visibility": "PUBLIC",
+      "summary": "Get a stream to write into this file.\u003cbr\u003e\u003cbr\u003e[see System.IO.FileStream]",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "File",
+  "visibility": "PUBLIC",
+  "summary": "A file, as defined by the underlying file system.",
+  "references": []
+}

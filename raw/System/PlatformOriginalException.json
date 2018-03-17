@@ -1,0 +1,40 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a platform class running exception with the class name and specific message. While entirely legal, it\u0027s not recommended for a user to create such instances.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "PlatformOriginalException",
+  "visibility": "PUBLIC",
+  "summary": "Exception thrown when the platform runtime encountered an error.\u003cbr\u003e\u003cbr\u003eWhen a user mapped type encountered a runtime exception, it will pop up through the platform stack and emerged at the platform-engine boundary, at which an exception of this type will be created, wrapping the underlying error and preserving its stack. Thus this exception\u0027s stack trace will contain both the script trace and the platform trace.",
+  "references": []
+}

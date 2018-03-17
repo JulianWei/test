@@ -1,0 +1,25 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a standard DivByZeroException instance. While entirely legal, it\u0027s not recommended for a user to create such instances.\u003cbr\u003e\u003cbr\u003eThe message for this exception is fixed.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "DivByZeroException",
+  "visibility": "PUBLIC",
+  "summary": "Exception to signal the algebraic divide-by-zero error. This is usually created by the engine when it encountered a zero value used as divisor in division or modulo operation.",
+  "references": []
+}

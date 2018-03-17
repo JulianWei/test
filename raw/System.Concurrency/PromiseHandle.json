@@ -1,0 +1,121 @@
+{
+  "ctors": [],
+  "fields": [],
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "resolve",
+      "visibility": "PUBLIC",
+      "summary": "Resolve the promise controlled by this handle, without setting any data. Calling [Promise.getResult()](Promise#getResult) will return null.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The end result to settle this promise. Calling [Promise.getResult()](Promise#getResult) will return it.",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "(unknown)",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "resolve",
+      "visibility": "PUBLIC",
+      "summary": "Resolve the promise controlled by this handle with specific data.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "reject",
+      "visibility": "PUBLIC",
+      "summary": "Reject the promise controlled by this handle, with a default cause. Calling [Promise.getResult()](Promise#getResult) will return or throw a [PromiseRejectedException].",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "A message to initialize [PromiseRejectedException].",
+          "type": {
+            "simpleName": "String",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "reject",
+      "visibility": "PUBLIC",
+      "summary": "Reject the promise controlled by this handle, with a specified message. Calling [Promise.getResult()](Promise#getResult) will return or throw a [PromiseRejectedException] that contains this message.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "An exception to set as the cause of rejection.",
+          "type": {
+            "simpleName": "Exception",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "reject",
+      "visibility": "PUBLIC",
+      "summary": "Reject the promise controlled by this handle, with a specified exception. Calling [Promise.getResult()](Promise#getResult) will return or throw this exception.",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "PromiseHandle",
+  "visibility": "PUBLIC",
+  "summary": "A handle exposed to the callback to manipulate promise result explicitly.\u003cbr\u003e\u003cbr\u003eThe promise normally sets its state by convention. If the function running in the promise completes successfully it will set the promise to [RESOLVED](PromiseState#RESOLVED). If the function throws an exception which went unhandled the promise will turn to [REJECTED](PromiseState#REJECTED). By the time a follow-up promise runs the state is reset to PENDING, but depending on what continuation function gets invoked the state may get carried over from the previous promise.\u003cbr\u003e\u003cbr\u003eWithout explicit interference through the handle, the RESOLVED state will continue to be propagated down the chain, unless the continuation function on success throws; the REJECTED state will do the same, unless the continuation function on error completes successfully.\u003cbr\u003e\u003cbr\u003eThrough the handle, however, the continuation logic can explicitly set the state of the current promise. This is useful in many scenarios, such as forcing the abortion without exception-based logic control, or restoring the state in a promise handling a rejected antecedent. Moreover this can be used to control the state of a [synthesized promise](DeferredPromise).\u003cbr\u003e\u003cbr\u003eOnce the promise is resolved this way, it cannot be explicitly set to REJECTED through the same handle. However, a following unhandled exception within the same callback may overwrite the state.",
+  "references": []
+}

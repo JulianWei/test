@@ -1,0 +1,172 @@
+{
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "The path to this directory.",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a new directory with the specified path.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [
+    {
+      "moduleName": "System.IO",
+      "simpleName": "Item",
+      "dimension": 0
+    }
+  ],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "isFile",
+      "visibility": "PUBLIC",
+      "summary": "Return false.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getName",
+      "visibility": "PUBLIC",
+      "summary": "Get the name of this directory. This is only the simple name (with extension part) under the path.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getPath",
+      "visibility": "PUBLIC",
+      "summary": "Get the absolute path of this directory. This doesn\u0027t include the name.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "True if the directory exists.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "exists",
+      "visibility": "PUBLIC",
+      "summary": "Whether this directory exist on file system.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "True if the directory was created; false if the directory already exists.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [
+        {
+          "summary": "An error occurred during directory creation.",
+          "type": {
+            "moduleName": "System.IO",
+            "simpleName": "IOException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "create",
+      "visibility": "PUBLIC",
+      "summary": "Create a directory represented by this object.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "True if the directory, along with all of its sub-directories and files contained with,were successfully deleted; false if the directory didn\u0027t exist.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [
+        {
+          "summary": "An error occurred during directory deletion.",
+          "type": {
+            "moduleName": "System.IO",
+            "simpleName": "IOException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "delete",
+      "visibility": "PUBLIC",
+      "summary": "Delete this directory recursively.\u003cbr\u003e\u003cbr\u003eThis operation is not transactional. If an exception is thrown during the call some items may have been deleted.\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "An array of items directly under this directory, including files and sub-directories. With this method,a recursion-based approach is usually applicable to processing all the items under a given directory.",
+        "type": {
+          "simpleName": "Item",
+          "dimension": 1
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "listAll",
+      "visibility": "PUBLIC",
+      "summary": "List all items directly under this directory.\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "Directory",
+  "visibility": "PUBLIC",
+  "summary": "A directory (a.k.a. folder), as defined by the underlying file system.",
+  "references": []
+}

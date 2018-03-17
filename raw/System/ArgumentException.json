@@ -1,0 +1,33 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "The name of parameter.",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a standard ArgumentException instance with specified parameter name. The message format for this exception is fixed.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "ArgumentException",
+  "visibility": "PUBLIC",
+  "summary": "Exception caused by an illegal argument. This is mostly a business error which is identified at the early stage of function call.",
+  "references": []
+}

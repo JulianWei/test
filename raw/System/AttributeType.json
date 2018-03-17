@@ -1,0 +1,31 @@
+{
+  "fields": [
+    {
+      "type": {
+        "simpleName": "Bool",
+        "dimension": 0
+      },
+      "isConst": false,
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "If true, multiple instances of this attribute can be applied at same place.",
+      "references": []
+    },
+    {
+      "type": {
+        "simpleName": "Integer",
+        "dimension": 0
+      },
+      "isConst": false,
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "The allowed types of target. This is the bitwise sum (OR\u0027ed) of all the allowed target constants.",
+      "references": []
+    }
+  ],
+  "subtype": "ATTRIBUTE",
+  "name": "AttributeType",
+  "visibility": "PUBLIC",
+  "summary": "The meta-attribute that applies to attribute type only.",
+  "references": []
+}

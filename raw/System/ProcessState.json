@@ -1,0 +1,27 @@
+{
+  "entries": [
+    {
+      "ordinal": 0,
+      "name": "NOT_STARTED",
+      "summary": "The process is not started.",
+      "references": []
+    },
+    {
+      "ordinal": 1,
+      "name": "IN_PROGRESS",
+      "summary": "The process is in progress.",
+      "references": []
+    },
+    {
+      "ordinal": 2,
+      "name": "TERMINATED",
+      "summary": "The process is terminated. It might have run to completion or aborted.",
+      "references": []
+    }
+  ],
+  "subtype": "ENUM",
+  "name": "ProcessState",
+  "visibility": "PUBLIC",
+  "summary": "The state of a process.\u003cbr\u003e\u003cbr\u003eA process can only go through these states in a single direction. Once a process is terminated it cannot be started again.",
+  "references": []
+}

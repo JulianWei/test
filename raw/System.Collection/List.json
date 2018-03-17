@@ -1,0 +1,235 @@
+{
+  "ctors": [
+    {
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a new and empty List object, with default capacity.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [
+    {
+      "moduleName": "System.Collection",
+      "simpleName": "Container",
+      "dimension": 0
+    }
+  ],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The element to add. This element can be null and of any type.",
+          "type": {
+            "simpleName": "Object",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "add",
+      "visibility": "PUBLIC",
+      "summary": "Add an item at the end of the list. This operation increase the size by 1.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Object",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The index at which the item will be returned.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [
+        {
+          "summary": "When the index is out of range.",
+          "type": {
+            "moduleName": "System",
+            "simpleName": "ArrayOutOfRangeException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "get",
+      "visibility": "PUBLIC",
+      "summary": "Get the item at the specified index.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The index at which the item will be returned.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "Object",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [
+        {
+          "summary": "When the index is out of range.",
+          "type": {
+            "moduleName": "System",
+            "simpleName": "ArrayOutOfRangeException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "put",
+      "visibility": "PUBLIC",
+      "summary": "Set the item at the specified index. The index must be within the range of current size.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The removed item.",
+        "type": {
+          "simpleName": "Object",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The index at which the item will be removed.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [
+        {
+          "summary": "When the index is out of range.",
+          "type": {
+            "moduleName": "System",
+            "simpleName": "ArrayOutOfRangeException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "remove",
+      "visibility": "PUBLIC",
+      "summary": "Remove the item at the specified index. The index must be within the range of current size.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The size of list.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "size",
+      "visibility": "PUBLIC",
+      "summary": "",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "List",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "map",
+      "visibility": "PUBLIC",
+      "summary": "Experimental - to remove.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "(unknown)",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "(unknown)",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "reduce",
+      "visibility": "PUBLIC",
+      "summary": "Experimental - to remove.",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "List",
+  "visibility": "PUBLIC",
+  "summary": "A list is a serial, self-scalable data structure that can grow its capacity on demand. This class is backed by a dynamically re-allocated platform array, which is not exposed through the API. The underlying implementation implies that the position-based operation can be costly, especially when the size grows significantly.\u003cbr\u003e\u003cbr\u003eThe list is iterable with the following syntax:\u003cbr\u003e\u003cbr\u003e[code]\n   for (var a : list) {\n     ... ... // can access element (a), but not update list\n   }[code: end]\u003cbr\u003e\u003cbr\u003eThe methods of this class are thread safe.",
+  "references": []
+}

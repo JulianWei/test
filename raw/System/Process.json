@@ -1,0 +1,329 @@
+{
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "The (path and) name of executable. A simple name will be resolved to anexecutable against the executable paths of OS (for example, the PATH environment variable on Windows and Linux). A path-like name will be resolved against the file system.",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The argument array to pass along to the process. Each element will be treated as a single argument, even if it contains space characters.",
+          "type": {
+            "simpleName": "string",
+            "dimension": 1
+          }
+        },
+        {
+          "summary": "",
+          "type": {
+            "moduleName": "System",
+            "simpleName": "ProcessConfig",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a process with specific settings.\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Process",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The (path and) name of executable. A simple name will be resolved to anexecutable against the executable paths of OS (for example, the PATH environment variable on Windows and Linux). A path-like name will be resolved against the file system.",
+          "type": {
+            "simpleName": "String",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The argument array to pass along to the process. Each element will be treated as a single argument, even if it contains space characters.",
+          "type": {
+            "simpleName": "String",
+            "dimension": 1
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": true,
+      "name": "create",
+      "visibility": "PUBLIC",
+      "summary": "A facade to create a process with default settings.\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Process",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": true,
+      "name": "getCurrent",
+      "visibility": "PUBLIC",
+      "summary": "Get the Process object for the currently running process.\u003cbr\u003e\u003cbr\u003eSince the returned object represents the current process (a JVM instance on which Julian engine is running), most methods that have modifying behavior are not allowed to call.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The exactly same name set by the constructor.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getName",
+      "visibility": "PUBLIC",
+      "summary": "Get the name of this process.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The exactly same argumenst set by the constructor.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 1
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getArgs",
+      "visibility": "PUBLIC",
+      "summary": "Get the arguments of this process.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The environment variable with the specified name. Null if not existing.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The environment variable\u0027s name",
+          "type": {
+            "simpleName": "String",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getEnvArg",
+      "visibility": "PUBLIC",
+      "summary": "Get the environment variable. This method will only work against the current process object, otherwise it throws.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A stream to write to this process. Null if [getInheritedIO](ProcessConfig#getInheritedIO)is true or [getInputStream](ProcessConfig#getInputStream) is not null.",
+        "type": {
+          "simpleName": "Stream",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getWriteStream",
+      "visibility": "PUBLIC",
+      "summary": "Get a stream to write to this process. This stream is backed by an OS pipeline. Note, however, if the process was started with inherited IO, or an explicitly set InputStream, then one cannot write to it programmatically and thus this method returns null.\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A stream to read from this process. Null if [getInheritedIO](ProcessConfig#getInheritedIO)is true or [getOutputStream](ProcessConfig#getOutputStream) is not null.",
+        "type": {
+          "simpleName": "Stream",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getReadStream",
+      "visibility": "PUBLIC",
+      "summary": "Get a stream to read from this process. This stream is backed by an OS pipeline. Note, however, if the process was started with inherited IO, or an explicitly set OutputStream, then one cannot read from it programmatically and thus this method returns null.\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A stream to read from this process\u0027s standard error. Null if [getInheritedIO](ProcessConfig#getInheritedIO)is true or [getErrorStream](ProcessConfig#getErrorStream) is not null.",
+        "type": {
+          "simpleName": "Stream",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getErrorStream",
+      "visibility": "PUBLIC",
+      "summary": "Get a stream to read from this process\u0027s standard error. This stream is backed by an OS pipeline. Note, however, if the process was started with inherited IO, or an explicitly set ErrorStream, then one cannot read from it programmatically and thus this method returns null.\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [
+        {
+          "summary": "if the process is not in [a state to start](ProcessState#NOT_STARTED).",
+          "type": {
+            "simpleName": "IllegalStateException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "start",
+      "visibility": "PUBLIC",
+      "summary": "Start the process. A process can only be started once.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The exit code of the process upon its completion.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "wait",
+      "visibility": "PUBLIC",
+      "summary": "Wait for the process to finish.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "True if the process ran to the end within the specified waiting duration.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The duration, in millisec, to wait for the process to finish.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "wait",
+      "visibility": "PUBLIC",
+      "summary": "Wait, for only specified milliseconds, for the process to finish.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "True if the process is still running.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "isAlive",
+      "visibility": "PUBLIC",
+      "summary": "Check if the process is alive. This method will return true only before [start()], or after either [wait()]/[kill()] is called.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The exit code of the process upon its completion.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [
+        {
+          "summary": "if the process [has not started yet](ProcessState#NOT_STARTED).",
+          "type": {
+            "simpleName": "IllegalStateException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "kill",
+      "visibility": "PUBLIC",
+      "summary": "Kill the process.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getExitCode",
+      "visibility": "PUBLIC",
+      "summary": "",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "Process",
+  "visibility": "PUBLIC",
+  "summary": "The class to represent an OS process.",
+  "references": []
+}

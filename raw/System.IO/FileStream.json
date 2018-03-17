@@ -1,0 +1,170 @@
+{
+  "parent": {
+    "moduleName": "System.IO",
+    "simpleName": "StreamBase",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "Can be a relative path to the working directory.",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "",
+          "type": {
+            "moduleName": "System.IO",
+            "simpleName": "FileMode",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a file stream with specified path and [mode](FileMode).",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [
+    {
+      "moduleName": "System.IO",
+      "simpleName": "AsyncStream",
+      "dimension": 0
+    }
+  ],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "True if the stream was open with [OPEN](FileMode#OPEN).",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "canRead",
+      "visibility": "PUBLIC",
+      "summary": "",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "True if the stream was open with [APPEND](FileMode#APPEND) or [CREATE](FileMode#CREATE).",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "canWrite",
+      "visibility": "PUBLIC",
+      "summary": "",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A promise that can be continued on. An on-success callback will take as argument the result returned from the [param: callback]; an on-erro callback will take as argument the exception faulting the IO operation.",
+        "type": {
+          "simpleName": "Promise",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The byte buffer to hold the data which is read off of the stream.",
+          "type": {
+            "simpleName": "Byte",
+            "dimension": 1
+          }
+        },
+        {
+          "summary": "The offset on buffer to start filling the data in.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The function to be called upon successful reading. The type of this functionis [func: int, System.Concurrency.PromiseHandle], first parameter indicating the number of bytes successfully read. -1 if reaching the end.",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "readAsync",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eRead asynchronously from the stream to the buffer, and invokes callback upon completion.\u003cbr\u003e\u003cbr\u003eThis method tries to read as many bytes as possible from the stream into the given buffer, starting from the [offset](param: offset) and not exceeding the buffer\u0027s capacity. This will move forward the stream pointer by the number of bytes actually read. If the stream hits the end, or the buffer runs short of room before reading the specified count, only those bytes will be read, making the returned value less than the count argument.\u003cbr\u003e\u003cbr\u003eUpon successful completion, the callback function will be invoked. The callback function has signature [func: int, System.Concurrency.PromiseHandle], with first parameter indicating the number of bytes successfully read. If the reading failed, this callback won\u0027t be called, and the users must process that with a continuation on the promise itself.\u003cbr\u003e\u003cbr\u003eThis method moves forward the stream pointer by the count equal to returned value. If [canRead()](#canReadAsync) return false, this method will throw [IOException](System.IO.IOException).\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A promise that can be continued on. An on-success callback will take as argument the result returned from the [param: callback]; an on-erro callback will take as argument the exception faulting the IO operation.",
+        "type": {
+          "simpleName": "Promise",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The byte buffer to hold the data which is read off of the stream.",
+          "type": {
+            "simpleName": "Byte",
+            "dimension": 1
+          }
+        },
+        {
+          "summary": "The function to be called upon successful reading. The type of this functionis [func: int, System.Concurrency.PromiseHandle], first parameter indicating the number of bytes successfully read. -1 if reaching the end. Throughout the promise\u0027s life cycle this callback will be invoked multiple times.",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "readAllAsync",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eRead asynchronously from the stream to the buffer until the end of stream is hit, and invokes callback upon completion for evertime a chunk of data is read, which usually fills the buffer, except for the last time.\u003cbr\u003e\u003cbr\u003eThis method tries to read as many bytes as possible from the stream into the given buffer. Once it reads a chunk of data, it will invoke the callback function, which has signature [func: int, System.Concurrency.PromiseHandle], with first parameter indicating the number of bytes successfully read. If the reading failed, this callback won\u0027t be called, and the users must process that with a continuation on the promise itself.\u003cbr\u003e\u003cbr\u003eThis method moves forward the stream pointer to the end of stream. If [canRead()](#canReadAsync) return false, this method will throw [IOException](System.IO.IOException).\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "True if the stream was open with [OPEN](FileMode#OPEN).",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "canReadAsync",
+      "visibility": "PUBLIC",
+      "summary": "(INHERITED DOC)\u003cbr\u003e\u003cbr\u003eWhether this stream supports reading. This method governs [readAsync](#readAsync), [readAllAsync](#readAllAsync).",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "FileStream",
+  "visibility": "PUBLIC",
+  "summary": "A stream backed by a file as defined on the underlying file system.",
+  "references": []
+}

@@ -1,0 +1,27 @@
+{
+  "entries": [
+    {
+      "ordinal": 0,
+      "name": "PENDING",
+      "summary": "The promise is pending to settle.",
+      "references": []
+    },
+    {
+      "ordinal": 1,
+      "name": "RESOLVED",
+      "summary": "The promise is resolved. A result can be returned now immediately.",
+      "references": []
+    },
+    {
+      "ordinal": 2,
+      "name": "REJECTED",
+      "summary": "The promise is rejected. An exception can be returned now immediately.",
+      "references": []
+    }
+  ],
+  "subtype": "ENUM",
+  "name": "PromiseState",
+  "visibility": "PUBLIC",
+  "summary": "The state of a promise.\u003cbr\u003e\u003cbr\u003eA promise goes through a very simple life cycle. It starts with [PENDING](#PENDING), during which it either runs a business function, or waits to be settled by a handle. The promise eventually gets settled in either of two possible states. If the function runs to end successfully, or the handle calls [resolve](PromiseHandle#resolve), the promise is [resolved](#RESOLVED); if the function throws an exception, or the handle calls [reject](PromiseHandle#reject), the promise ends up [rejected](#REJECTED).",
+  "references": []
+}

@@ -1,0 +1,40 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "The index being accessed.",
+          "type": {
+            "simpleName": "int",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The max index allowed. The min index is always 0.",
+          "type": {
+            "simpleName": "int",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a standard ArrayOutOfRangeException instance. The message for this exception is fixed.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "ArrayOutOfRangeException",
+  "visibility": "PUBLIC",
+  "summary": "Exception caused by attempting to use an index out of the allowed range. This can be created by the engine when it is trying to use an index on an array beyond its range. For example, a negative number, or a positive one larger than or equal to the length of the array, will cause this exception. A user may also create this exception pre-emptively as part of the argument check.",
+  "references": []
+}

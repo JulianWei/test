@@ -1,0 +1,33 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a standard ConcurrentModificationException instance. While entirely legal, it\u0027s not recommended for a user to create such instances.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "ConcurrentModificationException",
+  "visibility": "PUBLIC",
+  "summary": "An exception to throw when attempt to modify a container occurs when such omdification is not allowed.\u003cbr\u003e\u003cbr\u003eIn Julian, a container can be iterated with language level support:\u003cbr\u003e\u003cbr\u003e[code]\n   for (var a : list) {\n     ... ... // Within this block the list is locked.\n   }[code: end]\u003cbr\u003e\u003cbr\u003eHowever, during the iteration the list will be locked down by the current thread. If another thread attempts to modify the container, such as by adding or removing data, this exception will be raised. Modifying from the current thread, however, will not cause this error, but can lead to undefined iteration results.",
+  "references": []
+}

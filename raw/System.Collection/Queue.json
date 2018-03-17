@@ -1,0 +1,86 @@
+{
+  "ctors": [
+    {
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a new queue.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [
+    {
+      "moduleName": "System.Collection",
+      "simpleName": "Container",
+      "dimension": 0
+    }
+  ],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The new eleemnt to add. Can be null.",
+          "type": {
+            "simpleName": "(unknown)",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "enqueue",
+      "visibility": "PUBLIC",
+      "summary": "Add a new element to the tail of queue.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The element to remove; null if the queue is empty. It cannot differentiate between empty queue and null element.",
+        "type": {
+          "simpleName": "(unknown)",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "dequeue",
+      "visibility": "PUBLIC",
+      "summary": "Remove an element from the head of queue.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The size of queue.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "size",
+      "visibility": "PUBLIC",
+      "summary": "Get the current size of the queue.",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "Queue",
+  "visibility": "PUBLIC",
+  "summary": "A queue to provide data access capability based on first-in-first-out (FIFO) order.",
+  "references": []
+}

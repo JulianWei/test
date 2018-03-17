@@ -1,0 +1,31 @@
+{
+  "fields": [
+    {
+      "type": {
+        "simpleName": "String",
+        "dimension": 0
+      },
+      "isConst": false,
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "The name of API set, which is registered through engine\u0027s platform method registration API. This property is only applicable for class type itself.",
+      "references": []
+    },
+    {
+      "type": {
+        "simpleName": "String",
+        "dimension": 0
+      },
+      "isConst": false,
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "The name of member of the API set this member would bridge to. This property is only applicable for class members.",
+      "references": []
+    }
+  ],
+  "subtype": "ATTRIBUTE",
+  "name": "Bridged",
+  "visibility": "PUBLIC",
+  "summary": "A class marked by this attribute is bridged to platform class/methods through registration.\u003cbr\u003e\u003cbr\u003eThis approach allows an optimized performance at the price of complexity. As of current version, this attribute is reserved for system use only.",
+  "references": []
+}

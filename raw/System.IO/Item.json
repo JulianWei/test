@@ -1,0 +1,118 @@
+{
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "name": "",
+        "summary": "",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getName",
+      "visibility": "PUBLIC",
+      "summary": "Get the name of this item. This is only the simple name (with extension part) under the path.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "True if the item was successfully created.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "create",
+      "visibility": "PUBLIC",
+      "summary": "Create this item.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "True if the item was successfully deleted.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "delete",
+      "visibility": "PUBLIC",
+      "summary": "Delete this item.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getPath",
+      "visibility": "PUBLIC",
+      "summary": "Get the absolute path of this item. This doesn\u0027t include the name.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "True if the item exists.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "exists",
+      "visibility": "PUBLIC",
+      "summary": "Whether this item exist on file system.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "True if the item is a file; false a directory.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "isFile",
+      "visibility": "PUBLIC",
+      "summary": "Whether this item is a file",
+      "references": []
+    }
+  ],
+  "subtype": "INTERFACE",
+  "name": "Item",
+  "visibility": "PUBLIC",
+  "summary": "A file system item. Can be a file or directory.\u003cbr\u003e\u003cbr\u003eWhen using this and other FS APIs, it\u0027s common to deal with paths. Unless noted, a path can be either absolute or relative (to working directory of the current process). A path comprises of one or more sections, and in case of relative path the path can be even empty. These section are separated by a path separator, which can differ based on the OS. However, Julian recognizes both \u0027/\u0027 (POSIX) and \u0027\\\u0027 (Windows) as the equally legal path separator.",
+  "references": []
+}

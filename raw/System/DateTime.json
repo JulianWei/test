@@ -1,0 +1,274 @@
+{
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "year",
+          "type": {
+            "simpleName": "int",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "month, 1 - 12",
+          "type": {
+            "simpleName": "int",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "day, 1 - 31",
+          "type": {
+            "simpleName": "int",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "hour, 0 - 23",
+          "type": {
+            "simpleName": "int",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "minute, 0 - 59",
+          "type": {
+            "simpleName": "int",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "second, 0 - 59",
+          "type": {
+            "simpleName": "int",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "millisecond, 0 - 999",
+          "type": {
+            "simpleName": "int",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a datatime from each specified part.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "DateTime",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": true,
+      "name": "getNow",
+      "visibility": "PUBLIC",
+      "summary": "Get the current local time.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "toString",
+      "visibility": "PUBLIC",
+      "summary": "Convert the time to a default form (yyyy/MM/dd-hh:mm:ss.SSS).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "\u003c 0 if the other datetime is later than this one. \u003d 0 if equal; \u003e 0 if earlier.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The other datetime to subtract from this one.",
+          "type": {
+            "simpleName": "DateTime",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "diff",
+      "visibility": "PUBLIC",
+      "summary": "Return the difference in milliseconds (this - another)",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The value of the required part.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The part of this datetime to return.",
+          "type": {
+            "simpleName": "DateTimePart",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getPart",
+      "visibility": "PUBLIC",
+      "summary": "Get the value of a specified part from this datetime.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getYear",
+      "visibility": "PUBLIC",
+      "summary": "Get year.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getMonth",
+      "visibility": "PUBLIC",
+      "summary": "Get month. Note this value is 1-based, within the range of `[1, 12`].",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getDay",
+      "visibility": "PUBLIC",
+      "summary": "Get day. Note this value is 1-based, within the range of `[1, 31`].",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getHour",
+      "visibility": "PUBLIC",
+      "summary": "Get hour.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getMinute",
+      "visibility": "PUBLIC",
+      "summary": "Get minute.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getSecond",
+      "visibility": "PUBLIC",
+      "summary": "Get second.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getMilli",
+      "visibility": "PUBLIC",
+      "summary": "Get millisecond.",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "DateTime",
+  "visibility": "PUBLIC",
+  "summary": "Represent a data time in Gregorian calendar.",
+  "references": []
+}

@@ -1,0 +1,33 @@
+{
+  "entries": [
+    {
+      "ordinal": 0,
+      "name": "READY",
+      "summary": "The thread is ready to run.",
+      "references": []
+    },
+    {
+      "ordinal": 1,
+      "name": "RUNNING",
+      "summary": "The thread is running.",
+      "references": []
+    },
+    {
+      "ordinal": 2,
+      "name": "PENDING",
+      "summary": "The thread is pending.",
+      "references": []
+    },
+    {
+      "ordinal": 3,
+      "name": "DONE",
+      "summary": "The thread has finished running, either by normal completion or abortion.",
+      "references": []
+    }
+  ],
+  "subtype": "ENUM",
+  "name": "ThreadState",
+  "visibility": "PUBLIC",
+  "summary": "The state of thread.\u003cbr\u003e\u003cbr\u003eA thread runs through several stage in its life cycle. There is only one lifetime for a thread, so it cannot be started twice, even if it\u0027s already [done](#DONE).",
+  "references": []
+}

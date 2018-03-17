@@ -1,0 +1,58 @@
+{
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "Object",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "Object",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a new Entry with given key and value.",
+      "references": []
+    }
+  ],
+  "fields": [
+    {
+      "type": {
+        "simpleName": "(unknown)",
+        "dimension": 0
+      },
+      "isConst": false,
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "The key to the map.",
+      "references": []
+    },
+    {
+      "type": {
+        "simpleName": "(unknown)",
+        "dimension": 0
+      },
+      "isConst": false,
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "The value stored under this key.",
+      "references": []
+    }
+  ],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "Entry",
+  "visibility": "PUBLIC",
+  "summary": "A key-value pair from the map.",
+  "references": []
+}

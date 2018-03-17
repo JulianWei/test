@@ -1,0 +1,43 @@
+{
+  "parent": {
+    "moduleName": "System.Concurrency",
+    "simpleName": "Promise",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a deferred promise.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "PromiseHandle",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getHandle",
+      "visibility": "PUBLIC",
+      "summary": "Get a handle to this promise.",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "DeferredPromise",
+  "visibility": "PUBLIC",
+  "summary": "A deferred promise that starts in the [PENDING](PromiseState#PENDING) state. It exposes a [PromiseHandle] which can be used to set the state of this promise.",
+  "references": []
+}

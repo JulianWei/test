@@ -1,0 +1,33 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create an instance of IllegalStateException with specified message.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "IllegalStateException",
+  "visibility": "PUBLIC",
+  "summary": "A generic error indicating that the sub-system is in an illegal state to perform certain operations. This is commonly used in the business error.",
+  "references": []
+}

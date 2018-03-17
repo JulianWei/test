@@ -1,0 +1,33 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create an IOException with specified message.\u003cbr\u003e\u003cbr\u003e[message] The message for this exception.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "IOException",
+  "visibility": "PUBLIC",
+  "summary": "Any IO-related exception. Such errors typically involves access to disk, network adaptor, or other peripherals, but can also be thrown by an abstract layer which may not necessarily deal with real IO devices.",
+  "references": []
+}

@@ -1,0 +1,57 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a class loading exception with specific message. While entirely legal, it\u0027s not recommended for a user to create such instances.",
+      "references": []
+    },
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "",
+          "type": {
+            "moduleName": "System",
+            "simpleName": "Exception",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a class loading exception with specific message and cause. While entirely legal, it\u0027s not recommended for a user to create such instances.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "ClassLoadingException",
+  "visibility": "PUBLIC",
+  "summary": "Exception thrown during loading a type. Despite the name, this can be thrown for loading any types, including class, interface, attribute and enum.\u003cbr\u003e\u003cbr\u003eIn Julian, a type is loaded when it\u0027s first used, so importing a module, and defining a type in the current script, doesn\u0027t trigger type loading. Only by referencing a type for the first time during runtime will that type, along with all the dependencies, get loaded. If any type couldn\u0027t be loaded in this process, the entire type set will not be loaded. In Julian this is referred to as \"Loading Completeness Principle\", or simple LCP.\u003cbr\u003e\u003cbr\u003eA type may fail to load by various reasons. Most likely, since Julian is in interpreted language, the semantic check on the type will only happen by the time the loading is attempted. So failing to comply with the type definition semantics and restrictions can easily lead to such failure.\u003cbr\u003e\u003cbr\u003eThis exception is expected to be thrown by the engine, not user\u0027s script, although its constructors are public and free to call.",
+  "references": []
+}

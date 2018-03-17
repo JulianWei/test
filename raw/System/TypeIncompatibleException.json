@@ -1,0 +1,33 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create an instance of TypeIncompatibleException with specified message. Mainly reserved for system use.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "TypeIncompatibleException",
+  "visibility": "PUBLIC",
+  "summary": "This exception is used to represent a failure upon a function call, for failing to either convert an argument to the parameter type, or the result to the declared return type.",
+  "references": []
+}

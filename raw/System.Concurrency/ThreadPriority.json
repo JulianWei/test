@@ -1,0 +1,27 @@
+{
+  "entries": [
+    {
+      "ordinal": 0,
+      "name": "LOW",
+      "summary": "The thread has lower priority.",
+      "references": []
+    },
+    {
+      "ordinal": 1,
+      "name": "NORMAL",
+      "summary": "The thread has normal priority. This is the default setting for a thread.",
+      "references": []
+    },
+    {
+      "ordinal": 2,
+      "name": "HIGH",
+      "summary": "The thread has high priority.",
+      "references": []
+    }
+  ],
+  "subtype": "ENUM",
+  "name": "ThreadPriority",
+  "visibility": "PUBLIC",
+  "summary": "The priority of this thread. This setting is heavily dependent on the underlying implementation and thus is mostly used as a hint rather than directive.",
+  "references": []
+}

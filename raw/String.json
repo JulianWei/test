@@ -1,0 +1,319 @@
+{
+  "alias": "string",
+  "ctors": [],
+  "fields": [
+    {
+      "type": {
+        "simpleName": "Integer",
+        "dimension": 0
+      },
+      "isConst": true,
+      "isStatic": false,
+      "name": "length",
+      "visibility": "PUBLIC",
+      "summary": "The length of this string.",
+      "references": []
+    }
+  ],
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "true if the searched string/character is found.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The sub-string, or a single chracater, to search within this string. Note this method is special in that it can take two different types.",
+          "type": {
+            "simpleName": "Any",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [
+        {
+          "summary": "if the parameter has a type which is neither string nor char.",
+          "type": {
+            "moduleName": "System",
+            "simpleName": "TypeIncompatibleException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "contains",
+      "visibility": "PUBLIC",
+      "summary": "Check if the string contains the given string or character.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "true if the given string/character is matched to the ending sequence of this string.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The sub-string, or a single chracater, to match to the end of this string. Note this method is special in that it can take two different types.",
+          "type": {
+            "simpleName": "Any",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [
+        {
+          "summary": "if the parameter has a type which is neither string nor char.",
+          "type": {
+            "moduleName": "System",
+            "simpleName": "TypeIncompatibleException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "endsWith",
+      "visibility": "PUBLIC",
+      "summary": "Check if the string is ended with the given string or character.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "true if the given string/character is matched to the starting sequence of this string.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The sub-string, or a single chracater, to match to the start of this string. Note this method is special in that it can take two different types.",
+          "type": {
+            "simpleName": "Any",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [
+        {
+          "summary": "if the parameter has a type which is neither string nor char.",
+          "type": {
+            "moduleName": "System",
+            "simpleName": "TypeIncompatibleException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "startsWith",
+      "visibility": "PUBLIC",
+      "summary": "Check if the string is started with the given string or character.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "If a non-negative value, it\u0027s the index marking the start of the first occurence of the given string/character; if negative, the given stirng/chracter doesn\u0027t exist.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The sub-string, or a single chracater, to search with this string. Note this method is special in that it can take two different types.",
+          "type": {
+            "simpleName": "Any",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The index on the this string from which the search will be performed.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [
+        {
+          "summary": "if the parameter has a type which is neither string nor char.",
+          "type": {
+            "moduleName": "System",
+            "simpleName": "TypeIncompatibleException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "indexOf",
+      "visibility": "PUBLIC",
+      "summary": "Get the starting index (0-based) of the given string or character within this string.\u003cbr\u003e\u003cbr\u003eIf only checking for the existence within the entire string, consider using [contains()](#contains) instead.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "If a non-negative value, it\u0027s the index marking the start of the first occurence of the given string/character; if negative, the given stirng/chracter doesn\u0027t exist.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The sub-string, or a single chracater, to search with this string. Note this method is special in that it can take two different types.",
+          "type": {
+            "simpleName": "Any",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [
+        {
+          "summary": "if the parameter has a type which is neither string nor char.",
+          "type": {
+            "moduleName": "System",
+            "simpleName": "TypeIncompatibleException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "firstOf",
+      "visibility": "PUBLIC",
+      "summary": "Get the starting index (0-based) of the first occurence of the given string or character within this string.\u003cbr\u003e\u003cbr\u003eTo search only within a certain scope of this string, call [indexOf()](#indexOf) instead.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A substring out of this string.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The starting index (inclusive).",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The ending index (exclusive).",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [
+        {
+          "summary": "if the arguments contain negative value, or violates the order.",
+          "type": {
+            "moduleName": "System",
+            "simpleName": "ArgumentException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "substring",
+      "visibility": "PUBLIC",
+      "summary": "Get a substring out of this string.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A trimmed string.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "trim",
+      "visibility": "PUBLIC",
+      "summary": "Trim the start and end of this tring, removing all the leading and trailing blank chracacters.\u003cbr\u003e\u003cbr\u003eBlank characters are line feed (\\r), carriage return (\\n), horizontal tabulation (\\t) and space ( ).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A string with same characters, except in lower case.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "toLower",
+      "visibility": "PUBLIC",
+      "summary": "Convert the string to lower case.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A string with same characters, except in upper case.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "toUpper",
+      "visibility": "PUBLIC",
+      "summary": "Convert the string to upper case.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "An array of strings split out of this string.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 1
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The boundary to split at, which is not included into the resultant substrings.",
+          "type": {
+            "simpleName": "Any",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "split",
+      "visibility": "PUBLIC",
+      "summary": "Split the string into multiple substrings at the specified boundary.",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "String",
+  "summary": "String represents a fixed array of characters.\u003cbr\u003e\u003cbr\u003eString is a very special class type in Julian. Its assignment behavior is copy-by-value, instead of copy-by-references. This means assigning a string SA to string SB would first create a bit-level copy of the value that SA points to, then let the copy be pointed by SB, discarding whatever SB was previously referring.\u003cbr\u003e\u003cbr\u003eString is immutable. The methods exposed by this class are for reading its contents in various ways, and if any manipulating is implied (such as [replace](#repleace)), it always mean to create a new string as the result of manipulation. The original string instance always remain unchanged.\u003cbr\u003e\u003cbr\u003eString supports concatenaton operation by \u0027+\u0027, which can also be used along with values of other types, as long as at least one operand is string.",
+  "references": []
+}

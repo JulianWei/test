@@ -1,0 +1,6 @@
+{
+  "alias": "int",
+  "name": "Integer",
+  "summary": "The integer type in Julian language. An int type has a value range from -2147483648 (-2^31) to 2147483647 (2^-31 - 1). It can be hard-cast to [byte](Byte) with all digits above the 7th lost; it can also be implicitly cast to [float](Float) without precision change.\u003cbr\u003e\u003cbr\u003eint type can participate in arithmetic operations such as \u0027+\u0027 and \u0027*\u0027 and \u0027/\u0027. It can aslo be concatenated to string value with \u0027+\u0027 operator in the literal form of this value.\u003cbr\u003e\u003cbr\u003eint is a primitive type. Therefore it can only be assigned to a variable with same type or an [untyped](Any) variable.",
+  "references": []
+}

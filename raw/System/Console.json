@@ -1,0 +1,79 @@
+{
+  "ctors": [],
+  "fields": [],
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "Object",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": true,
+      "name": "print",
+      "visibility": "PUBLIC",
+      "summary": "Print the given value to the console. If the value is an [Object], calls [Object.toString()] to get the string to output. If the value is of primitive type, prints its literal representation. If the value is null, prints \"(null)\".",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "Object",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": true,
+      "name": "println",
+      "visibility": "PUBLIC",
+      "summary": "Print the given value to the console, then a line break sequences as defined by the underlying operating system. See [toString()] (Object.toString()) for more details.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "the string comprised of the input characters, excluding the line break at the end.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": true,
+      "name": "readln",
+      "visibility": "PUBLIC",
+      "summary": "Read the characters from standard input, until a line break sequences as defined by the underlying operating system is met. This method will be blocking the thread until the line break is accepted.",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "Console",
+  "visibility": "PUBLIC",
+  "summary": "Console provide means to input from and output to character-oriented terminal of the operating system.",
+  "references": []
+}

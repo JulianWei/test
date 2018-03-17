@@ -1,0 +1,33 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create an instance of IllegalCastingException with specified message. Mainly reserved for system use.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "IllegalCastingException",
+  "visibility": "PUBLIC",
+  "summary": "The casting is illegal. This can happen when the target type is not on the hierarchy of current type\u0027s inheritance.\u003cbr\u003e\u003cbr\u003eIn Julian, object casting is always safe when a type is cast to an super type or the same type. It\u0027s not possible to cast to a child type, if the runtime type of variable is indeed that type, or a subtype thereof. If not, or if casting to a side type (the type with which the current type only shares the common ancestor, which in the most common case is [Object]), will throw this exception.\u003cbr\u003e\u003cbr\u003eCasting the primitive type may also cause this exception if the types are not castable (such as from int to bool), or if the target is an Object.",
+  "references": []
+}

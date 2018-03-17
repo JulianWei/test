@@ -1,0 +1,51 @@
+{
+  "entries": [
+    {
+      "ordinal": 0,
+      "name": "YEAR",
+      "summary": "Year",
+      "references": []
+    },
+    {
+      "ordinal": 1,
+      "name": "MONTH",
+      "summary": "Month (1-12)",
+      "references": []
+    },
+    {
+      "ordinal": 2,
+      "name": "DAY",
+      "summary": "Day in a month (1-31)",
+      "references": []
+    },
+    {
+      "ordinal": 3,
+      "name": "HOUR",
+      "summary": "Hour in a day (0-23)",
+      "references": []
+    },
+    {
+      "ordinal": 4,
+      "name": "MINUTE",
+      "summary": "Minute in an hour (0-59)",
+      "references": []
+    },
+    {
+      "ordinal": 5,
+      "name": "SECOND",
+      "summary": "Second in a minute (0-59)",
+      "references": []
+    },
+    {
+      "ordinal": 6,
+      "name": "MILLISECOND",
+      "summary": "Millisecond in a second (0-999)",
+      "references": []
+    }
+  ],
+  "subtype": "ENUM",
+  "name": "DateTimePart",
+  "visibility": "PUBLIC",
+  "summary": "The constituent parts of a data time object, in Gregorian calendar.\u003cbr\u003e\u003cbr\u003ePay particular attention to the index for each part. Both MONTH and DAY are 1-based; HOURS and below are 0-based.",
+  "references": []
+}

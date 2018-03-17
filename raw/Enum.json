@@ -1,0 +1,36 @@
+{
+  "alias": "",
+  "ctors": [],
+  "fields": [
+    {
+      "type": {
+        "simpleName": "Integer",
+        "dimension": 0
+      },
+      "isConst": true,
+      "isStatic": false,
+      "name": "ordinal",
+      "visibility": "PUBLIC",
+      "summary": "The integer value associated with this member.",
+      "references": []
+    },
+    {
+      "type": {
+        "simpleName": "String",
+        "dimension": 0
+      },
+      "isConst": true,
+      "isStatic": false,
+      "name": "literal",
+      "visibility": "PUBLIC",
+      "summary": "The name of this member, exactly as is defined in the type\u0027s definition.",
+      "references": []
+    }
+  ],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "Enum",
+  "summary": "Enum is a special class type which defines an ordered enumeration of names, each associated with an integer value. Enum inherits [Object](Object), but cannot be instantiated. Its use is strictly limited to immutable access to its members in a static context.\u003cbr\u003e\u003cbr\u003eTo declare an enum,\u003cbr\u003e\u003cbr\u003e[code]\nenum Color {\n  RED \u003d 0,\n  YELLOW \u003d 1,\n  GREEN \u003d 2\n}[code: end] The integer value defined for each name is not required. If not provided, it\u0027s defaulted to the value of previous name plus 1. In the case of first name, it\u0027s defaulted to 0. Each value must be distinct within the enum, otherwise would cause definition exception when the type is loaded.\u003cbr\u003e\u003cbr\u003eThe name of an enum can be referred to by normal addressing syntax, such as\u003cbr\u003e\u003cbr\u003e[code]\nColor c \u003d Color.YELLOW;[code: end] However, these names cannot be used as a left value.\u003cbr\u003e\u003cbr\u003eAn enum variable, when defined without an initializer, will be initialized to the first name of that enum type. The null value cannot be assigned to an enum variable.\u003cbr\u003e\u003cbr\u003eAn enum\u0027s member has two constant fields. [literal](#literal) exposes the name as a [string], [ordinal](#ordinal) the associated integer value.\u003cbr\u003e\u003cbr\u003eJulian provides syntax-level support for switch logic based on an enum variable:\u003cbr\u003e\u003cbr\u003e[code]\nColor c \u003d ...;\nswitch(c){\ncase RED: ...\ncase YELLOW: ...\ncase GREEN: ...\n}[code: end]\u003cbr\u003e\u003cbr\u003eFor more detailed description on Enum, see [Julian Tutorial].",
+  "references": []
+}

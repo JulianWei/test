@@ -1,0 +1,112 @@
+{
+  "ctors": [
+    {
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create an exception without any specific information.",
+      "references": []
+    },
+    {
+      "params": [
+        {
+          "summary": "The message for this exception.",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create an exception with message.",
+      "references": []
+    },
+    {
+      "params": [
+        {
+          "summary": "The message for this exception.",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The inner cause for this exception, which is also an exception.",
+          "type": {
+            "moduleName": "System",
+            "simpleName": "Exception",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create an exception with message and cause.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "Can be null if the message was not specified during construction.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getMessage",
+      "visibility": "PUBLIC",
+      "summary": "Get the message.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "Can be null if the message was not specified during construction.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 1
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getStackTrace",
+      "visibility": "PUBLIC",
+      "summary": "Get the current stack trace, starting from the function where the exception was thrown (originating function) and ending with the current function.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "Can be null if the cause was not specified during construction.",
+        "type": {
+          "simpleName": "Exception",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getCause",
+      "visibility": "PUBLIC",
+      "summary": "Get the cause of this exception, if any.",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "Exception",
+  "visibility": "PUBLIC",
+  "summary": "The exception class that can be thrown by scripts, or raised directly from the engine.\u003cbr\u003e\u003cbr\u003eAll Julian exceptions are derived from this class. An exception can be captured using the classic try-catch blocks, where exception are matched against each catch section in the script order.",
+  "references": []
+}

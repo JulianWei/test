@@ -1,0 +1,38 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create an instance of IllegalAttributeUsageException with specified message. Mainly reserved for system use.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "IllegalAttributeUsageException",
+  "visibility": "PUBLIC",
+  "summary": "The use of attribute is illegal. In Julian the attribute legality check is performed during class loading and this exception could be thrown as the cause for ClassLoadingException.",
+  "references": [
+    {
+      "simpleName": "ClassLoadingException",
+      "dimension": 0
+    }
+  ]
+}

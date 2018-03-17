@@ -1,0 +1,73 @@
+{
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "name": "",
+        "summary": "The string representation of the platform object.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "pfToString",
+      "visibility": "PUBLIC",
+      "summary": "The delegating method to call toString() defined on the platform class.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "An integer calculated from the platform object.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "pfHashCode",
+      "visibility": "PUBLIC",
+      "summary": "The delegating method to call hashcode() defined on the platform class.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "True if the argument is considered equal to this one.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "name": "val",
+          "summary": "The object to compare with. If the argument is not a mapped objectthis method will return false; otherwise it delegates that to the equals(Object) method defined on the platform class.",
+          "type": {
+            "simpleName": "Object",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "pfEquals",
+      "visibility": "PUBLIC",
+      "summary": "The delegating method to call equals(Object) defined on the platform class.\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    }
+  ],
+  "subtype": "INTERFACE",
+  "name": "PlatformObject",
+  "visibility": "PUBLIC",
+  "summary": "An interface used to mark a [mapped](System.Mapped) platform type so that certain platform members can be implemented here. Useful when explicitly defining [Object] methods, such as toString(), which may have the same name as a member on platform Object. The explicitly defined methods can then call these methods.\u003cbr\u003e\u003cbr\u003eThese methods must not be implemented explicitly. The engine will automatically implement them when loading a type marked by this interface.",
+  "references": []
+}

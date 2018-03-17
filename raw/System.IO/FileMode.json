@@ -1,0 +1,27 @@
+{
+  "entries": [
+    {
+      "ordinal": 0,
+      "name": "APPEND",
+      "summary": "If file doesn\u0027t exist, create one; if it does, append new contents to the end. File is in WRITE mode.",
+      "references": []
+    },
+    {
+      "ordinal": 1,
+      "name": "CREATE",
+      "summary": "If file doesn\u0027t exist, create one; if it does, truncate the contents. File is in WRITE mode.",
+      "references": []
+    },
+    {
+      "ordinal": 2,
+      "name": "OPEN",
+      "summary": "Open an existing file. If it doesn\u0027t exist, throw IOException. File is in READ mode.",
+      "references": []
+    }
+  ],
+  "subtype": "ENUM",
+  "name": "FileMode",
+  "visibility": "PUBLIC",
+  "summary": "The mode to open a stream from a file.",
+  "references": []
+}

@@ -1,0 +1,78 @@
+{
+  "ctors": [],
+  "fields": [
+    {
+      "type": {
+        "simpleName": "Integer",
+        "dimension": 0
+      },
+      "isConst": true,
+      "isStatic": true,
+      "visibility": "PUBLIC",
+      "summary": "",
+      "references": []
+    },
+    {
+      "type": {
+        "simpleName": "Integer",
+        "dimension": 0
+      },
+      "isConst": true,
+      "isStatic": true,
+      "visibility": "PUBLIC",
+      "summary": "",
+      "references": []
+    },
+    {
+      "type": {
+        "simpleName": "Integer",
+        "dimension": 0
+      },
+      "isConst": true,
+      "isStatic": true,
+      "visibility": "PUBLIC",
+      "summary": "",
+      "references": []
+    },
+    {
+      "type": {
+        "simpleName": "Integer",
+        "dimension": 0
+      },
+      "isConst": true,
+      "isStatic": true,
+      "visibility": "PUBLIC",
+      "summary": "",
+      "references": []
+    },
+    {
+      "type": {
+        "simpleName": "Integer",
+        "dimension": 0
+      },
+      "isConst": true,
+      "isStatic": true,
+      "visibility": "PUBLIC",
+      "summary": "",
+      "references": []
+    },
+    {
+      "type": {
+        "simpleName": "Integer",
+        "dimension": 0
+      },
+      "isConst": true,
+      "isStatic": true,
+      "visibility": "PUBLIC",
+      "summary": "",
+      "references": []
+    }
+  ],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "AttributeTarget",
+  "visibility": "PUBLIC",
+  "summary": "The target an attribute can apply to.",
+  "references": []
+}

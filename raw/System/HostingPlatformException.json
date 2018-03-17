@@ -1,0 +1,39 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create an instance of HostingPlatformException with specified message. Mainly reserved for system use.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "HostingPlatformException",
+  "visibility": "PUBLIC",
+  "summary": "An exception thrown indicating a platform error. Unlike [PlatformOriginalException](System.PlatformOriginalException), this exception doesn\u0027t preserve the platform stack. This exception is mainly used by foundation classes as a way to report a platform failure, without exposing the engine internals.",
+  "references": [
+    {
+      "moduleName": "System",
+      "simpleName": "PlatformOriginalException",
+      "dimension": 0
+    }
+  ]
+}

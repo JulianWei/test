@@ -1,0 +1,38 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create an instance of MissingRequirementException with specified message. Mainly reserved for system use.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "MissingRequirementException",
+  "visibility": "PUBLIC",
+  "summary": "A module being imported, directly or indirectly, is missing. This is likely thrown as the cause for ClassLoadingException.",
+  "references": [
+    {
+      "simpleName": "ClassLoadingException",
+      "dimension": 0
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "parent": {
+    "moduleName": "System.Collection",
+    "simpleName": "Queue",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a new blocking queue.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "The element to remove; null if the queue is empty. It cannot differentiate between empty queue and null element.",
+        "type": {
+          "simpleName": "(unknown)",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The time to wait, in milliseconds.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "true if to throw out IllegalStateException upon waiting expiration.",
+          "type": {
+            "simpleName": "Bool",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [
+        {
+          "summary": "Only if (throwIfTimeout)[param: throwIfTimeout] is true.",
+          "type": {
+            "simpleName": "IllegalStateException",
+            "dimension": 0
+          }
+        }
+      ],
+      "isStatic": false,
+      "name": "pull",
+      "visibility": "PUBLIC",
+      "summary": "Remove an element from the head of queue. If the queue is empty, wait for [specified duration](param: timeoutInMillisec). If new data becomes available within the duration this method will return successfully. Otherwise it either returns null, or throws, upon expiration.\u003cbr\u003e\u003cbr\u003eThis method will send the current thread into waiting state. Use caution to avoid deadlock.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The new eleemnt to add. Can be null.",
+          "type": {
+            "simpleName": "(unknown)",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "enqueue",
+      "visibility": "PUBLIC",
+      "summary": "Add a new element to the tail of queue. This will notify all the threads waiting at the call to [pull](#pull).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The element to remove; null of the queue is empty. It cannot differentiate between empty queue and null element.",
+        "type": {
+          "simpleName": "(unknown)",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "dequeue",
+      "visibility": "PUBLIC",
+      "summary": "Remove an element from the head of queue.\u003cbr\u003e\u003cbr\u003eThis method preserves the behavior of the [parent class](System.Collection.Queue). It won\u0027t wait on an empty queue, and it will return null if the queue is empty.",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "BlockingQueue",
+  "visibility": "PUBLIC",
+  "summary": "A queue with extended capability of blocking on pulling operation until data is available.\u003cbr\u003e\u003cbr\u003eWith the [ordinary queue](Queue) the dequeue operation returns immediately with the element at the head, or null if the queue is empty. A blocking queue, however, supports dequeuing with extended waiting time, during which it will put the current thread into a waiting thread. When a new element is added, it will notify the waiting threads, so that the dequeue operation can proceed.  ",
+  "references": []
+}

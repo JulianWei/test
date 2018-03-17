@@ -1,0 +1,240 @@
+{
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "a function to call with this promise.",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a promise and start immediately.",
+      "references": []
+    },
+    {
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PROTECTED",
+      "summary": "Create a promise and but assign no operation to it. Therefore the promise will linger on [PENDING](PromiseState#PENDING) state.\u003cbr\u003e\u003cbr\u003eThis constructor is reserved only for subclasses and is subject to removal in the future.",
+      "references": []
+    }
+  ],
+  "fields": [
+    {
+      "type": {
+        "simpleName": "PromiseQueue",
+        "dimension": 0
+      },
+      "isConst": false,
+      "isStatic": false,
+      "visibility": "PROTECTED",
+      "summary": "",
+      "references": []
+    }
+  ],
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "A promise that has been kicked off with the given function.",
+        "type": {
+          "simpleName": "Promise",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": true,
+      "name": "start",
+      "visibility": "PUBLIC",
+      "summary": "A factory method to start a promise with a specified function.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A promise that is pending.",
+        "type": {
+          "simpleName": "DeferredPromise",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": true,
+      "name": "defer",
+      "visibility": "PUBLIC",
+      "summary": "A factory method to create a [deferred promise](DeferredPromise), which is now staying on [PENDING](PromiseState#PENDING) state.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A new promise within which one of the two given functions is invoked.",
+        "type": {
+          "simpleName": "Promise",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The function to continue upon resolution.",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The function to continue upon rejection.",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "then",
+      "visibility": "PUBLIC",
+      "summary": "Continue this promise with one of two function, one for resolution, the other rejection.\u003cbr\u003e\u003cbr\u003eThe function to continue with can take up to two arguments: the first one an untyped value which is either the result produced by the previous promise, or exception that faulted the previous promise. The second value is a [PromiseHandle] referring to the current promise. Since this function is to be invoked dynamically, it\u0027s legal to pass any number of arguments, although only the first two will be heeded.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A new promise within which the given function is invoked, if the current one resolves. If the current one rejects,the exception is propagated to the new promise, which would not run the given function.",
+        "type": {
+          "simpleName": "Promise",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The function to continue upon success.",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "then",
+      "visibility": "PUBLIC",
+      "summary": "Continue this promise with a function on resolution. If this promise eventually rejects, the given function won\u0027t run, and the exception will be propagated to the new promise.\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A new promise within which the given function is invoked, if the current one rejects. If the current one resolves,the result is propagated to the new promise, which would not run the given function.",
+        "type": {
+          "simpleName": "Promise",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "error",
+      "visibility": "PUBLIC",
+      "summary": "Continue this promise with a function on rejection. If this promise eventually resolves, the given function won\u0027t run, and the result will be propagated to the new promise.\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "A new promise within which the given function is invoked.",
+        "type": {
+          "simpleName": "Promise",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The function to continue upon completion",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "fin",
+      "visibility": "PUBLIC",
+      "summary": "Always continue this promise with a function on completion of this promise.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "the result, or exception in case of rejection.",
+        "type": {
+          "simpleName": "(unknown)",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "true to re-throw the faulting exception if the promise rejected.",
+          "type": {
+            "simpleName": "Bool",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getResult",
+      "visibility": "PUBLIC",
+      "summary": "Get the result or faulting exception of this promise.\u003cbr\u003e\u003cbr\u003eThis method will block if the promise has not completed yet.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "toString",
+      "visibility": "PUBLIC",
+      "summary": "",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "Promise",
+  "visibility": "PUBLIC",
+  "summary": "This class represents a promise that a certain operation will eventually arrive at a conclusion, upon which a result or exception can be demanded.\u003cbr\u003e\u003cbr\u003eThe promise is the primary means in Julian to perform asynchronous programming. Its API is heavily inspired by JavaScript. In general, a user creates a Promise with a [Function](Function), and continues it with following operations that can be triggered either on successful completion or abortion. The continuation itself is a new promise, thus enabling the creation of the promise chain, which would run on its own thread, without blocking the thread from which the chain is created and invoked.\u003cbr\u003e\u003cbr\u003eMany I/O APIs provides asynchronous methods which return Promises. These API serve as the starting point for most users in their asynchronous programming. However, the programmers may also create their own Promises and even control their completion through a handle. See [DeferredPromise] for more details.",
+  "references": []
+}

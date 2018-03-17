@@ -1,0 +1,28 @@
+{
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "name": "",
+        "summary": "the current count of stored items.",
+        "type": {
+          "simpleName": "Integer",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "size",
+      "visibility": "PUBLIC",
+      "summary": "Get the size of this container. Size is refers to the current count of items stored in the container, and is different from - more precisely less than or equal to - the container\u0027s capacity.",
+      "references": []
+    }
+  ],
+  "subtype": "INTERFACE",
+  "name": "Container",
+  "visibility": "PUBLIC",
+  "summary": "A container to hold script objects or values of various types.\u003cbr\u003e\u003cbr\u003eSince Julian doesn\u0027t support generic programming, the type of stored values can be arbitrary and mixed.",
+  "references": []
+}

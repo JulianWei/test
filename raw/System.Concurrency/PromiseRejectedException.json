@@ -1,0 +1,33 @@
+{
+  "parent": {
+    "moduleName": "System",
+    "simpleName": "Exception",
+    "dimension": 0
+  },
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a standard PromiseRejectedException instance. The users, however, usually just fault the promise by throwing a more specific exception.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [],
+  "subtype": "CLASS",
+  "name": "PromiseRejectedException",
+  "visibility": "PUBLIC",
+  "summary": "The default exception to return or throw upon demand of a rejected promised. This class is mostly used by the system to facilitate faulting process, but a user\u0027s promise callback usually throws more specific exceptions.",
+  "references": []
+}

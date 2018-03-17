@@ -1,0 +1,8 @@
+{
+  "fields": [],
+  "subtype": "ATTRIBUTE",
+  "name": "Untyped",
+  "visibility": "PUBLIC",
+  "summary": "The method or constructor marked by this attribute bypasses type checking for the arguments passed along.",
+  "references": []
+}

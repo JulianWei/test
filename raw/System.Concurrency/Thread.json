@@ -1,0 +1,213 @@
+{
+  "ctors": [
+    {
+      "params": [
+        {
+          "summary": "The function to run on this thread.",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The name of this thread. If null, a default name will be assigned to it.",
+          "type": {
+            "simpleName": "string",
+            "dimension": 0
+          }
+        },
+        {
+          "summary": "The priority of this thread.",
+          "type": {
+            "moduleName": "System.Concurrency",
+            "simpleName": "ThreadPriority",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "visibility": "PUBLIC",
+      "summary": "Create a thread with specified function, name and priority.",
+      "references": []
+    }
+  ],
+  "fields": [],
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "summary": "A thread ready to start.",
+        "type": {
+          "simpleName": "Thread",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "The function to run on this thread.",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": true,
+      "name": "create",
+      "visibility": "PUBLIC",
+      "summary": "A factory method to create a thread with a function. The thread will have a default name and normal priority.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "Thread\u0027s name.",
+        "type": {
+          "simpleName": "String",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getName",
+      "visibility": "PUBLIC",
+      "summary": "Get the name of this thread.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "start",
+      "visibility": "PUBLIC",
+      "summary": "Start the thread.\u003cbr\u003e\u003cbr\u003eCalling this on the current thread will throw [IllegalStateException](System.IllegalStateException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "join",
+      "visibility": "PUBLIC",
+      "summary": "Wait until the specified thread is finished.\u003cbr\u003e\u003cbr\u003eThis method will block until the thread finishes. Calling this on the current thread will throw [IllegalStateException](System.IllegalStateException).",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "Void",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "interrupt",
+      "visibility": "PUBLIC",
+      "summary": "Send interruption signal to this thread.\u003cbr\u003e\u003cbr\u003eNote the receiving thread must have logic to check this and react accordingly. The sender must not assume such logic exists and therefore shall not solely rely on this to coordinate inter-thread works.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "The thread object representing the current thread (the one on which this method is called)",
+        "type": {
+          "simpleName": "Thread",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": true,
+      "name": "getCurrent",
+      "visibility": "PUBLIC",
+      "summary": "Get the Thread object for the currently running thread.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "true if interrupted, with the interruption flag reset; false if time is up.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "summary": "sleep duration in milliseconds",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": true,
+      "name": "sleep",
+      "visibility": "PUBLIC",
+      "summary": "Let the current thread sleep for specified duration.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "true if interrupted, with the interruption flag reset; false if not.",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": true,
+      "name": "checkInterruption",
+      "visibility": "PUBLIC",
+      "summary": "Check if the thread has been interrupted. Also reset the interruption flag.",
+      "references": []
+    },
+    {
+      "returnType": {
+        "summary": "",
+        "type": {
+          "simpleName": "ThreadState",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "getState",
+      "visibility": "PUBLIC",
+      "summary": "Get state of the thread.",
+      "references": []
+    }
+  ],
+  "subtype": "CLASS",
+  "name": "Thread",
+  "visibility": "PUBLIC",
+  "summary": "A program thread.\u003cbr\u003e\u003cbr\u003eA thread is a light-weight execution unit within a process. A thread has its own stack and runs independently from other threads, only subject to thread scheduling controlled by the underlying managed platform or operating system.\u003cbr\u003e\u003cbr\u003eJulian doesn\u0027t have a thread manager on its own. The threads are created and are scheduled by the platform (JVM) thread manager. However, except for the main thread, which is the default thread on which the script engine starts execution, all other threads are background threads and will terminate upon completion of the main thread.\u003cbr\u003e\u003cbr\u003eOnce started, threads cannot be stopped or suspended. However, they can be interrupted by calling [interrupt()](#interrupt), yet such events will go unnoticed if the thread\u0027s business logic doesn\u0027t actively check and react to it. The only real effect an interruption can cause is to force the thread to exit sleeping.\u003cbr\u003e\u003cbr\u003eThreads can synchronized with each other through a particular class: [Lock](System.Concurrency.Lock). If threads are competing on certain resources, use a lock to guard the critical region.",
+  "references": []
+}

@@ -1,0 +1,117 @@
+{
+  "interfaces": [],
+  "methods": [
+    {
+      "returnType": {
+        "name": "",
+        "summary": "A promise that can be continued on. An on-success callback will take as argument the result returned from the [param: callback]; an on-erro callback will take as argument the exception faulting the IO operation.",
+        "type": {
+          "simpleName": "Promise",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "name": "buffer",
+          "summary": "The byte buffer to hold the data which is read off of the stream.",
+          "type": {
+            "simpleName": "Byte",
+            "dimension": 1
+          }
+        },
+        {
+          "name": "offset",
+          "summary": "The offset on buffer to start filling the data in.",
+          "type": {
+            "simpleName": "Integer",
+            "dimension": 0
+          }
+        },
+        {
+          "name": "callback",
+          "summary": "The function to be called upon successful reading. The type of this functionis [func: int, System.Concurrency.PromiseHandle], first parameter indicating the number of bytes successfully read. -1 if reaching the end.",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "readAsync",
+      "visibility": "PUBLIC",
+      "summary": "Read asynchronously from the stream to the buffer, and invokes callback upon completion.\u003cbr\u003e\u003cbr\u003eThis method tries to read as many bytes as possible from the stream into the given buffer, starting from the [offset](param: offset) and not exceeding the buffer\u0027s capacity. This will move forward the stream pointer by the number of bytes actually read. If the stream hits the end, or the buffer runs short of room before reading the specified count, only those bytes will be read, making the returned value less than the count argument.\u003cbr\u003e\u003cbr\u003eUpon successful completion, the callback function will be invoked. The callback function has signature [func: int, System.Concurrency.PromiseHandle], with first parameter indicating the number of bytes successfully read. If the reading failed, this callback won\u0027t be called, and the users must process that with a continuation on the promise itself.\u003cbr\u003e\u003cbr\u003eThis method moves forward the stream pointer by the count equal to returned value. If [canRead()](#canReadAsync) return false, this method will throw [IOException](System.IO.IOException).\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "A promise that can be continued on. An on-success callback will take as argument the result returned from the [param: callback]; an on-erro callback will take as argument the exception faulting the IO operation.",
+        "type": {
+          "simpleName": "Promise",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [
+        {
+          "name": "buffer",
+          "summary": "The byte buffer to hold the data which is read off of the stream.",
+          "type": {
+            "simpleName": "Byte",
+            "dimension": 1
+          }
+        },
+        {
+          "name": "callback",
+          "summary": "The function to be called upon successful reading. The type of this functionis [func: int, System.Concurrency.PromiseHandle], first parameter indicating the number of bytes successfully read. -1 if reaching the end. Throughout the promise\u0027s life cycle this callback will be invoked multiple times.",
+          "type": {
+            "simpleName": "Function",
+            "dimension": 0
+          }
+        }
+      ],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "readAllAsync",
+      "visibility": "PUBLIC",
+      "summary": "Read asynchronously from the stream to the buffer until the end of stream is hit, and invokes callback upon completion for evertime a chunk of data is read, which usually fills the buffer, except for the last time.\u003cbr\u003e\u003cbr\u003eThis method tries to read as many bytes as possible from the stream into the given buffer. Once it reads a chunk of data, it will invoke the callback function, which has signature [func: int, System.Concurrency.PromiseHandle], with first parameter indicating the number of bytes successfully read. If the reading failed, this callback won\u0027t be called, and the users must process that with a continuation on the promise itself.\u003cbr\u003e\u003cbr\u003eThis method moves forward the stream pointer to the end of stream. If [canRead()](#canReadAsync) return false, this method will throw [IOException](System.IO.IOException).\u003cbr\u003e\u003cbr\u003e",
+      "references": []
+    },
+    {
+      "returnType": {
+        "name": "",
+        "summary": "",
+        "type": {
+          "simpleName": "Bool",
+          "dimension": 0
+        }
+      },
+      "isAbstract": false,
+      "params": [],
+      "exceptions": [],
+      "isStatic": false,
+      "name": "canReadAsync",
+      "visibility": "PUBLIC",
+      "summary": "Whether this stream supports reading. This method governs [readAsync](#readAsync), [readAllAsync](#readAllAsync).",
+      "references": []
+    }
+  ],
+  "subtype": "INTERFACE",
+  "name": "AsyncStream",
+  "visibility": "PUBLIC",
+  "summary": "The asynchronous stream interface.\u003cbr\u003e\u003cbr\u003eThe methods declared in [Stream] are synchronous. This interface provides an alternative. Instead of blocking the thread and waiting until I/O devices return, the asynchronous methods return a [promise](System.Concurrency.Promise) immediately, so that the callsite can continue to execute other code. The promise wraps a continuation that will be called back upon completion of I/O operation.",
+  "references": [
+    {
+      "moduleName": "System.Concurrency",
+      "simpleName": "Promise",
+      "dimension": 0
+    },
+    {
+      "moduleName": "System.IO",
+      "simpleName": "Stream",
+      "dimension": 0
+    }
+  ]
+}
