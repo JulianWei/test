@@ -16,7 +16,12 @@ Array is an indexable vector structure with direct language support. It inherits
 The length of this array. Note for multi-dimensional array this refers to the length of the first dimension.
 ## Methods
 <a name="m-copy-Array-int-Array-int-int"></a>
-### <code>public static int copy([Array](../Array) *src*, [int](../Integer) *srcOffset*, [Array](../Array) *dst*, [int](../Integer) *dstOffset*, [int](../Integer) *count*)</code>
+### <code>public static int 
+  
+  copy([Array](../Array) *src*, [int](../Integer) *srcOffset*
+  
+  , [Array](../Array) *dst*, [int](../Integer) *dstOffset*, 
+  [int](../Integer) *count*)</code>
 Copy certain section of one array to that of another.
 
 **Parameters**
